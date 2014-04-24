@@ -21,7 +21,7 @@ Description
 
  - [OTOSimpleRawChat](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOSimpleRawChat):Massenger app using all Opentalkon components including API.
 <br> (1) Friend list, Find&Add friend, Favorites
-<br> (2)  1:! chatting, Group chatting, Photo upload, Push notificaion
+<br> (2)  1:1 chatting, Group chatting, Photo upload, Push notificaion
 <br> (3)  Change profile, Notificaion settings
 
 Reference
