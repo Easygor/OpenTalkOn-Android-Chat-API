@@ -31,6 +31,7 @@ For more information please visit
 Screenshot
 ----------
 
+Screenshots of Basic App using Opentalkon API.
 <p align="center">
   <img src="http://www.opentalkon.com/assets/images/main_screenshots.png"/>
 </p>
