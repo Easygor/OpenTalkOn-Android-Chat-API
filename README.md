@@ -10,7 +10,8 @@ Immediately try in 5 minutes!
 
 Reference
 ---------
-[OpenTalkOn Android API Reference](http://www.opentalkon.com/assets/reference/annotated.html)<br>
+ - English: [OpenTalkOn Android API Reference](http://www.opentalkon.com/assets/reference/annotated.html)<br>
+ - Korean: [OpenTalkOn Android API Reference](http://www.opentalkon.co.kr/assets/reference/annotated.html)<br>
 
 Description
 -----------
