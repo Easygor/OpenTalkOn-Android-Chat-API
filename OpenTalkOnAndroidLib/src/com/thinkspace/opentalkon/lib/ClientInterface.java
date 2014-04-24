@@ -13,12 +13,12 @@ import com.thinkspace.opentalkon.ui.OTMain;
 
 public class ClientInterface {
 	/**
-	 * @breif Notification에 설정될 아이콘과 앱이름을 바꿉니다. \n
-	 * 			  Notification은 메시지가 도착했을때, 누군가 내글을 좋아하거나 댓글을 달았을때 나타나게 됩니다. \n
-	 * 			  따로 설정하지 않으면 OpenTalkOn의 기본 아이콘 및 이름으로 보여지게 됩니다.
-	 * @param smallIcon : notification의 상태바에 보여지게될 Icon으로써, drawable의 ID를 넘기면 됩니다. 앱의 아이콘을 작게 만드신 후에 설정하면 가장 적당합니다.(38x38 사이즈 권장)
-	 * @param bigIcon : notification의 내용에서 보여지게될 Icon으로써, drawable의 ID를 넘기면 됩니다. 앱의 아이콘을 설정하면 가장 적당합니다.
-	 * @param appName : notification의 내용에서 보여지게될 사용하게될 앱이름 입니다.
+	 * @breif Changes icon and App name to be set on Notification. \n
+	 * 			  Notification is shown when message arrives, someone 'Likes' my post or when a comment is written on post. \n
+	 * 			  If not additionally set, basic OpenTalkOn icon and name is shown.
+	 * @param smallIcon : Icon to be shown on status bar of notification. Drawable ID should be passed. Most appropriate when App icon is made small.(38x38 size recommended)
+	 * @param bigIcon : Icon to be shown on status bar of notification. Drawable ID should be passed. Most appropriate when your original App icon is set.
+	 * @param appName : App name to be used and shown in notification.
 	 */
 	public static void changeNotificationContents(int smallIcon, int bigIcon, String appName){
 		if(smallIcon != -1){
@@ -32,61 +32,52 @@ public class ClientInterface {
 		}
 	}
 	/**
-	 * @breif 유저의 토큰을 가져옵니다.
-	 * @remark 리턴값이 빈문자열("")일 경우 InitLibrary를 정상적으로 호출했는지 확인 주십시오.
-	 * @return 유저 토큰 or 아직 정상적으로 토큰이 설정되지 않았을경우 빈문자열("")
+	 * @breif Brings user token.
+	 * @remark When return value is an empty string(""), check if InitLibrary was successfully called.
+	 * @return User token or empty string("") when token is not normally set
 	 */
 	public static String getToken(){
 		return OTOApp.getInstance().getToken();
 	}
 	
 	/**
-	 * @breif 유저의 ID를 가져옵니다.(대화나 유저정보를 가져올때 사용)
-	 * @remark 리턴값이 -1일 경우 InitLibrary를 정상적으로 호출했는지 확인 주십시오.
-	 * @return 유저 ID or 아직 정상적으로 아이디가 설정되지 않았을경우 -1
+	 * @breif Brings User ID.(Used when calling chats or user information)
+	 * @remark Check if InitLibrary was successfully called if return value is -1.
+	 * @return User ID or -1 when ID is not successfully set yet
 	 */
 	public static long getId(){
 		return OTOApp.getInstance().getId();
 	}
 	
 	/**
-	 * @breif 라이브러리를 초기화 합니다.
-	 * @param Context context : 어플리케이션 컨텍스트
-	 * @param String appToken : 오픈톡온 관리콘솔에서 확인한 appToken
+	 * @breif Initialize Library.
+	 * @param context : Application context
+	 * @param appToken : AppToken checked at OpenTalkOn management console
 	 */
 	public static void InitLibrary(Context context, String appToken){
 		OTOApp.getInstance().InitOpenTalkLib(context, appToken, null, false);
 	}	
 	
 	/**
-	 * @breif 라이브러리를 초기화 합니다.
-	 * @param Context context : 어플리케이션 컨텍스트
-	 * @param String appToken : 오픈톡온 관리콘솔에서 확인한 appToken
-	 * @param BroadcastReceiver receiver : 토큰을 제대로 받아 왔는지 여부를 확인 할 수있는 Receiver
-	 * @remark receiver로 전달되는 Intent는 getStringExtra("result")로 결과값을 확인 가능하며\n
-	 * 				"ok"일 경우 정상인 것을 나타내며, 다른경우 에러 메시지를 가지고 있습니다.
+	 * @breif Initialize Library.
+	 * @param context : Application context
+	 * @param appToken : AppToken checked at OpenTalkOn management console
+	 * @param receiver : Receiver that checks of the token was successfully received
+	 * @remark Intent, which is sent to the receiver, checks the result by getStringExtra("result").\n
+	 * 				"ok" shows normal condition and other cases have error messages.
 	 */
 	public static void InitLibrary(Context context, String appToken, BroadcastReceiver receiver){
 		OTOApp.getInstance().InitOpenTalkLib(context, appToken, receiver, false);
 	}
 	
-	/**
-	 * @breif 라이브러리를 초기화 합니다.
-	 * @param Context context : 어플리케이션 컨텍스트
-	 * @param String appToken : 오픈톡온 관리콘솔에서 확인한 appToken
-	 * @param BroadcastReceiver receiver : 토큰을 제대로 받아 왔는지 여부를 확인 할 수있는 Receiver
-	 * @param boolean phoneVerify : 폰인증을 받을건지 여부
-	 * @remark receiver로 전달되는 Intent는 getStringExtra("result")로 결과값을 확인 가능하며\n
-	 * 				"ok"일 경우 정상인 것을 나타내며, 다른경우 에러 메시지를 가지고 있습니다.
-	 */
 	public static void InitLibrary(Context context, String appToken, BroadcastReceiver receiver, boolean phoneVerify){
 		OTOApp.getInstance().InitOpenTalkLib(context, appToken, receiver, phoneVerify);
 	}
 	
 	/**
-	 * @breif 사용자에게 토큰이 발급 되었는지 확인 합니다. 발급이 되어 있지 않은경우, 정상적으로 오픈톡온 API를 이용하실 수 없습니다. \n
-	 * 			 발급이 되어 있지 않은경우, 자동으로 발급을 신청합니다.(몇초후 다시 시도했을경우 발급되어 있을 수 있음)
-	 * @return 성공 여부
+	 * @breif It is checked if a token is issued to the user. If the token is not issued, OpenTalkOn API cannot be successfully used. \n
+	 * 			 If the token is not issued, the issue is automatically requested. (May be issued when trying after a few seconds)
+	 * @return Success condition
 	 */
 	public static boolean checkHasToken(){
 		if(OTOApp.getInstance().getToken().length() == 0){
@@ -105,13 +96,11 @@ public class ClientInterface {
 	}
 	
 	/**
-	 * @breif 사용자의 토큰을 가져옵니다.
-	 * @return 사용자의 토큰
+	 * @breif Open OpenTalkOn main Activity.
+	 * @param context : Android context to open activity
+	 * @param fullScreen : Fullscreen condition
+	 * @return Success condition
 	 */
-	public static String getUserToken(){
-		return OTOApp.getInstance().getToken();
-	}
-	
 	public static boolean startOpenTalkOnMain(final Context context, boolean fullScreen){
 		OTOApp.getInstance().setMainFullScreen(fullScreen);
 		final Intent intent = new Intent(context, OTMain.class);
@@ -129,9 +118,9 @@ public class ClientInterface {
 	}
 	
 	/**
-	 * @breif 오픈톡온의 메인 Activity를 실행합니다.
-	 * @param Context context : Activity를 실행할 안드로이드 Context
-	 * @return 성공 여부
+	 * @breif Open OpenTalkOn main Activity.
+	 * @param context : Android context to open activity
+	 * @return Success condition
 	 */
 	public static boolean startOpenTalkOnMain(final Context context){
 		OTOApp.getInstance().setMainFullScreen(false);
@@ -150,11 +139,11 @@ public class ClientInterface {
 	}
 	
 	/**
-	 * @breif 오픈톡온의 채팅방 Activity를 실행합니다.
-	 * @param Context context : Activity를 실행할 안드로이드 Context
-	 * @param ArrayList<Long> userIds : 대화를 나눌 상대들의 사용자 ID
-	 * @remark 이미 해당 상대들과의 대화방이 열려 있으면 자동으로 이전의 대화방이 열린다.
-	 * @return 성공 여부
+	 * @breif Open chatting room activity of OpenTalkOn.
+	 * @param context : Android context to open activity
+	 * @param userIds : User ID of users to chat with
+	 * @remark When chatting again with a previous user, you enter the previous chatting room.
+	 * @return Success condition
 	 */
 	public static boolean startChatRoom(final Context context, ArrayList<Long> userIds){
 		final Intent intent = new Intent(context, OTChatRoom.class);
@@ -173,11 +162,11 @@ public class ClientInterface {
 	}
 	
 	/**
-	 * @breif 오픈톡온의 채팅방 Activity를 실행합니다.
-	 * @param Context context : Activity를 실행할 안드로이드 Context
-	 * @param Long userIds : 대화를 나눌 상대방의 사용자 ID
-	 * @remark 이미 해당 상대와의 대화방이 열려 있으면 자동으로 이전의 대화방이 열린다.
-	 * @return 성공 여부
+	 * @breif Open chatting room activity of OpenTalkOn.
+	 * @param context : Android context to open activity
+	 * @param userId : User ID of users to chat with
+	 * @remark When chatting again with a previous user, you enter the previous chatting room.
+	 * @return Success condition
 	 */
 	public static boolean startChatRoom(Context context, Long userId){
 		ArrayList<Long> users = new ArrayList<Long>();
@@ -187,19 +176,19 @@ public class ClientInterface {
 	}
 	
 	/**
-	 * @breif 새로운 대화 메시지가 도착 했을때 알릴지 여부를 설정합니다.
-	 * @param boolean value : 설정 값
+	 * @breif Sets alert of new chatting message arrivals.
+	 * @param value : Setting value
 	 */
 	public static void settingChatNotify(boolean value){
 		OTOApp.getInstance().getPref().getSetting_chat_notifiy().setValue(value);
 	}
 	
 	/**
-	 * @breif 정상적인 이미지 경로를 얻어 옵니다.
-	 * @param String partialURL : 변환할 부분 이미지 URL
-	 * @remark getFriends 등 사용자 정보에서의 imageURL을 정상적인 이미지 경로로 변환할때 사용합니다.
-	 * @return 실패했을경우 null
-	 * @return 성공했을경우 정상적인 이미지 경로
+	 * @breif Get valid image path.
+	 * @param partialURL : Partial image URL to change
+	 * @remark Used when changing imageURL in user information into normal image path.
+	 * @return null when failed
+	 * @return Valid image path when successful
 	 */
 	public static String makeImageUrl(String partialURL){
 		return TASatelite.makeImageUrl(partialURL);
