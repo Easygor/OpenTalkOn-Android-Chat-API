@@ -1,4 +1,4 @@
-OpenTalkOn-Android-Chatting-API
+OpenTalkOn-Android-Chat-API
 ===============================
 
 You can make chatting application for FREE using Opentalkon API.<br>
