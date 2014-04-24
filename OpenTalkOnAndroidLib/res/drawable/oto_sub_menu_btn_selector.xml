@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+		android:state_pressed="true"
+		android:state_enabled="true"
+		android:drawable="@drawable/oto_sub_menu_bt_p" />
+ 
+    <item
+    	android:state_focused="true"
+        android:state_enabled="true"
+        android:drawable="@drawable/oto_sub_menu_bt_p" />
+ 
+    <item
+		android:state_enabled="true"
+		android:drawable="@drawable/oto_sub_menu_bt_n" />
+    <item
+		android:state_enabled="false"
+		android:drawable="@drawable/oto_sub_menu_bt_n" />
+</selector>

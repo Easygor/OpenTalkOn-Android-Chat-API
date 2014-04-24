@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/oto_conv_list_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:visibility="gone"
+        android:background="@drawable/oto_main_background"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="1dp" >
+
+        <TextView
+            android:id="@+id/oto_conv_list_info_layout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/oto_text_main_color"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="80dp"
+	    android:orientation="horizontal"
+	    android:background="@drawable/oto_list_btn_friend_selector"
+	    android:id="@+id/oto_conv_elem_layout">
+	    <RelativeLayout android:layout_width="80dp"
+	        android:layout_height="fill_parent"
+		    android:layout_gravity="center_vertical"
+		    android:padding = "5dip">
+		    <ImageView android:id="@+id/oto_conv_elem_img"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:scaleType="fitXY"
+				android:padding="2dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentLeft="true"/>
+	    </RelativeLayout>
+	    
+	    <LinearLayout android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="1.0"
+		    android:layout_gravity="center_vertical">
+		    <LinearLayout android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:paddingTop="10dip"
+			    android:orientation="vertical"
+			    android:layout_weight="1">
+			    <LinearLayout android:layout_width="wrap_content"
+					android:layout_height="15dp"
+					android:visibility="gone"
+					android:id="@+id/oto_conv_elem_title_layout"
+					android:orientation="horizontal">
+					<ImageView android:layout_width="15dp"
+					    android:layout_height="15dp"
+					    android:src="@drawable/oto_opentalk_icon_category"
+					    android:id="@+id/oto_conv_elem_title_image"
+					    android:visibility="gone"/>
+				    <TextView android:id="@+id/oto_conv_elem_talker_name" 
+				        android:layout_gravity="center_vertical"
+				        android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="오픈톡온"
+						android:textStyle="bold"
+						android:ellipsize="end"
+						android:textColor="#000000"
+						android:singleLine="true"
+						android:textSize="12dp"/>
+			    </LinearLayout>
+				<TextView android:textColor="@android:color/black"
+				    android:textSize="12sp"
+					android:id="@+id/oto_conv_elem_title_layout2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:visibility="gone"
+					android:layout_gravity="center_vertical"/>
+				<TextView android:textColor="@android:color/black"
+				    android:textSize="10sp"
+					android:id="@+id/oto_conv_elem_lasttalk"
+					android:layout_marginTop="5dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"/>
+		    </LinearLayout>
+		    <FrameLayout android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2.3">
+			    <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+			        android:src="@drawable/oto_right_arrow"
+			        android:layout_gravity="center_vertical|right"
+			        android:id="@+id/oto_conv_elem_right_layout_2"/>
+		        <RelativeLayout android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:id="@+id/oto_conv_elem_right_layout_1">
+					<TextView android:id="@+id/oto_conv_elem_date"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:text="13.11.11"
+					    android:textColor="#787878"
+					    android:textSize="12dip"
+					    android:layout_alignParentRight="true"
+					    android:layout_alignParentTop="true"
+					    android:paddingRight="10dip"
+					    android:paddingTop="10dip"/>
+					<LinearLayout android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal"
+					    android:layout_alignParentRight="true"
+					    android:layout_marginRight="10dp"
+					    android:layout_marginTop="2dp"
+					    android:layout_below="@id/oto_conv_elem_date"
+					    android:gravity="right">
+					    <ImageView android:id="@+id/oto_conv_elem_lock"
+						    android:layout_width="20dp"
+						    android:layout_height="20dp"
+						    android:visibility="gone"
+						    android:layout_marginRight="2dp"
+						    android:src="@drawable/oto_lock_black"/>
+					    <ImageView android:id="@+id/oto_conv_elem_alarm"
+						    android:layout_width="20dp"
+						    android:layout_height="20dp"/>
+					</LinearLayout>
+					<TextView
+					    android:id="@+id/oto_conv_elem_cnt"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentBottom="true"
+					    android:layout_alignParentRight="true"
+					    android:layout_marginBottom="5dip"
+					    android:layout_marginRight="10dip"
+					    android:background="@drawable/oto_type_text_background"
+					    android:paddingLeft="4dp"
+					    android:paddingRight="4dp"
+					    android:text="1"
+					    android:textColor="@android:color/white"
+					    android:textSize="15dip" />
+
+		    	</RelativeLayout>
+		    </FrameLayout>
+	    </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

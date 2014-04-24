@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp">
+	<ImageView android:layout_width="80dp"
+	    android:layout_height="80dp"
+	    android:layout_gravity="center"
+	    android:scaleType="fitXY"
+	    android:id="@+id/oto_conv_detail_image_image"/>
+	<Button android:layout_width="25dp"
+	    android:layout_height="25dp"
+	    android:background="@drawable/oto_btn_cancel_selector"
+	    android:layout_gravity="right|top"
+	    android:id="@+id/oto_conv_detail_image_cancel"/>
+</FrameLayout>

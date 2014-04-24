@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/oto_list_btn_friend_selector"
+    android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="60dp"
+	    android:orientation="horizontal"
+	    android:id="@+id/oto_recent_elem_layout">
+	    <RelativeLayout android:layout_width="60dp"
+	        android:layout_height="fill_parent"
+		    android:layout_gravity="center_vertical"
+		    android:padding ="5dip">
+		    <ImageView android:id="@+id/oto_recent_elem_img"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:scaleType="fitXY"
+				android:padding="2dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentLeft="true"/>
+	    </RelativeLayout>
+	    
+	    <LinearLayout android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="1.0"
+		    android:layout_gravity="center_vertical">
+		    <RelativeLayout android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:paddingTop="7dp"
+			    android:layout_weight="1">
+				<TextView
+				    android:id="@+id/oto_recent_elem_title"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_vertical"/>
+			    <FrameLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/oto_recent_elem_title"
+					android:layout_marginTop="3dp">
+					<ImageView android:layout_width="15dp"
+					    android:layout_height="15dp"
+					    android:src="@drawable/oto_opentalk_icon_category"
+					    android:id="@+id/oto_recent_elem_title_image"/>
+				    <TextView android:id="@+id/oto_recent_elem_description" 
+				        android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#14477a"
+						android:textStyle="bold"
+						android:maxLines="2"
+						android:ellipsize="end"
+						android:textSize="11dp"/>
+			    </FrameLayout>
+		    </RelativeLayout>
+		    <FrameLayout android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2.3">
+		        <RelativeLayout android:layout_width="fill_parent"
+				    android:layout_height="fill_parent">
+					<TextView android:id="@+id/oto_recent_elem_date"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:text="13.11.11"
+					    android:textColor="#787878"
+					    android:textSize="12dip"
+					    android:layout_alignParentRight="true"
+					    android:layout_alignParentTop="true"
+					    android:paddingRight="10dp"
+					    android:paddingTop="5dp"/>
+					<ImageView android:id="@+id/oto_recent_elem_locker"
+					    android:layout_width="20dp"
+					    android:layout_height="20dp"
+					    android:src="@drawable/oto_unlock"
+					    android:layout_marginRight="10dp"
+					    android:layout_marginBottom="5dp"
+					    android:layout_alignParentRight="true"
+					    android:layout_alignParentBottom="true"/>
+					<ImageView android:id="@+id/oto_recent_elem_sub_image"
+					    android:layout_width="30dp"
+					    android:layout_height="30dp"
+					    android:src="@drawable/oto_oto_logo"
+					    android:layout_marginRight="10dp"
+					    android:layout_marginBottom="5dp"
+					    android:layout_alignParentRight="true"
+					    android:layout_alignParentBottom="true"/>
+		    	</RelativeLayout>
+		    </FrameLayout>
+	    </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

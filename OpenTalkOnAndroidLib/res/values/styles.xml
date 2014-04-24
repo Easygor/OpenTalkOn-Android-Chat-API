@@ -1,0 +1,7 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="oto_AppTheme" parent="android:Theme.Light" />
+    <style name="oto_YourCustomStyle" parent="@android:style/Theme.Dialog">
+    	<item name="android:windowBackground">@null</item> 
+  		<item name="android:windowFrame">@null</item>
+  	</style>
+</resources>

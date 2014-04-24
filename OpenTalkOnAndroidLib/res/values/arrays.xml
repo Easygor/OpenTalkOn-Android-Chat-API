@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    
+	<string-array name="oto_chat_msg_menu">
+	    <item>Copy</item>
+	</string-array>
+    
+	<string-array name="oto_post_item_method">
+	    <item>Bring from album</item>
+	    <item>Take a photo</item>
+	    <item>Delete</item>
+	</string-array>
+	
+	<string-array name="oto_public_room_management_private">
+	    <item>Kick User</item>
+	    <item>Give Auth of Moderator</item>
+	    <item>Make a Chat to Private</item>
+	</string-array>
+	
+	<string-array name="oto_public_room_management_public">
+	    <item>Kick User</item>
+	    <item>Give Auth of Moderator</item>
+	    <item>Make a Chat to Public</item>
+	</string-array>
+	
+	<string-array name="oto_conv_list_modify_method">
+	    <item>Exit chatting room</item>
+	</string-array>
+	
+	<string-array name="oto_user_list_method">
+	    <item>Delete this friend</item>
+	</string-array>
+</resources>

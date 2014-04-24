@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <dimen name="ot_more_app_button_height">93dp</dimen>
+    <dimen name="ot_more_app_button_small_height">85dp</dimen>
+    
+    <dimen name="ot_more_app_bottom_base_height">320dp</dimen>
+    <dimen name="ot_more_app_bottom_name_size">15dp</dimen>
+    <dimen name="ot_more_app_bottom_body_size">12dp</dimen>
+    <dimen name="ot_text_msg_maxwidth">160dp</dimen>
+    
+        <dimen name="com_opentalkon_facebook_picker_divider_width">2px</dimen>
+</resources>

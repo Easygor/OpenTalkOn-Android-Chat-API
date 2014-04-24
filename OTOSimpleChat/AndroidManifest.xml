@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thinkspace.otosimplechat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+	<uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+	<uses-feature android:name="android.hardware.camera" android:required="false"/>
+    
+    <uses-sdk android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <application android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".Application">
+        <activity android:name="com.thinkspace.otosimplechat.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+		<receiver android:name="com.thinkspace.opentalkon.bootReceiver"><intent-filter><action android:name="android.intent.action.PACKAGE_REPLACED"/><data android:scheme="package"/></intent-filter></receiver>
+		<receiver android:name="com.thinkspace.opentalkon.bootReceiver"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"/></intent-filter></receiver>
+		<activity android:name="com.opentalkon.facebook.LoginActivity" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTLike" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" android:launchMode="singleTask"/>
+		<activity android:name="com.thinkspace.opentalkon.ui.OTComGroupActivity" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+		<activity android:name="com.thinkspace.opentalkon.ui.OTVerifyPhone" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+		<activity android:name="com.thinkspace.opentalkon.ui.OTNotification" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+		<activity android:name="com.thinkspace.opentalkon.ui.OTWritePost" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTAddFriend" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTMoreTabOpentalk" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTMoreApp" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTAgreement" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTOpenTalkDetail" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTGallerySelect" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+		<activity android:name="com.thinkspace.opentalkon.ui.OTGallery" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTSettingBlockUser" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTVersion" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMainTabOpenTalk" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMainTabRecent" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMainTabFriendList" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMainTabChatList" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMainTabMore" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTPublicTalkList" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTSettingMyInfo" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTChatRoom" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTPublicChatRoom" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTOpenTalkRoom" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTOpenTalkImageRoom" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTEntireImageView" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTSelectUser" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMakeChat" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMakePublicChat" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTMain" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTLimit" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.thinkspace.opentalkon.ui.OTFriendPopup" android:configChanges="keyboardHidden|orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden" />
+        <service android:name="com.thinkspace.opentalkon.OTPushService" android:enabled="true" />
+    </application>
+</manifest>

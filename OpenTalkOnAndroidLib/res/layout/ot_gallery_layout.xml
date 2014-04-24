@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/oto_top">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/oto_text_reverse_color"
+            android:layout_gravity="center"
+            android:id="@+id/oto_base_tab_title"
+            android:text="@string/oto_select_multiple_picture"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="right">
+	        <View android:layout_width="2px"
+	            android:layout_height="32dp"
+	            android:layout_gravity="center_vertical"
+	            android:background ="@drawable/oto_top_line"/>
+	        <FrameLayout android:layout_width="40dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/oto_top_btn_selector"
+	            android:id="@+id/oto_main_cancel_button">
+		        <ImageView android:layout_width="20dp"
+		            android:layout_height="20dp"
+		            android:layout_gravity="center"
+		            android:background="@drawable/oto_close"/>
+	        </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+	<ListView android:id="@+id/oto_otgallery_listview"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:background="@drawable/oto_list_background"
+        android:cacheColorHint="#00000000"
+        android:transcriptMode="disabled"
+        android:divider="#bcbcbc"
+    	android:dividerHeight="1px"/>
+    <TextView android:id="@+id/oto_otgallery_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+		android:background="@drawable/oto_list_btn_tab_selector"
+        android:textColor="@android:color/black"
+        android:text="@string/oto_not_exist_picture"/>
+</LinearLayout>
