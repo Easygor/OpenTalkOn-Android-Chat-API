@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oto_config_db_filename">opentalkon.db</string>
+    
+    <string name="oto_broker_appclient_host">broker-kr.opentalkon.com</string>
+    <string name="oto_android_service_host">https://android-kr.opentalkon.com:9090/</string>
+    <!-- 
+    <string name="oto_android_service_host">http://192.168.0.2:9000/</string>
+    <string name="oto_android_service_host">https://android-kr.opentalkon.com:9090/</string>
+     -->
+    <integer name="oto_no_terms_of_use">0</integer>
+    
+    <string name="oto_broker_appclient_port">8883</string>
+    <string name="oto_broker_service_restart_interval">600000</string>
+    <string name="oto_push_service_login_fail_reconnect_interval">600000</string>
+    <string name="oto_facebook_app_id">379115638877624</string>
+    <string name="oto_lib_version">1.20</string>
+    <integer name="oto_lib_version_code">5</integer>
+</resources>

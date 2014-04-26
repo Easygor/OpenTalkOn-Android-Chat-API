@@ -1,0 +1,269 @@
+<resources>
+
+    <string name="oto_lib_name">오픈톡온</string>
+    <string name="oto_year">년</string>
+    <string name="oto_month">월</string>
+    <string name="oto_day">일</string>
+    <string name="oto_day_of_week">요일</string>
+    <string name="oto_send">전송</string>
+    <string name="oto_save_picture">사진 저장</string>
+    <string name="oto_not_authorize">권한이 없습니다.</string>
+    <string name="oto_app_deleted">오픈톡온 기능은 더이상 사용이 불가능합니다.</string>
+    <string name="oto_clear_all">모두 지우기</string>
+    <string name="oto_terms_of_use">이용약관</string>
+    <string name="oto_privacy_policy">개인정보취급방침</string>
+    <string name="oto_and">및</string>
+    <string name="oto_agree">동의</string>
+    <string name="oto_like_people">좋아하는 사람들</string>
+    <string name="oto_facebook_login_ok">페이스북으로 로그인 성공!</string>
+    <string name="oto_facebook_public_conditon">페이스북 페이지 공개</string>
+    <string name="oto_facebook_page">페이스북 페이지</string>
+    <string name="oto_notification">알림</string>
+    <string name="oto_notification_empty">알림이 없습니다.</string>
+    <string name="oto_management">관리</string>
+    
+    <string name="oto_go_community">커뮤니티 가기</string>
+    <string name="oto_go_chatroom">채팅방 가기</string>
+    
+    <string name="oto_yes">예</string>
+    <string name="oto_no">아니요</string>
+    
+    <string name="oto_verify_phone">핸드폰 번호 인증</string>
+    <string name="oto_point">현재 포인트</string>
+    
+    <string name="oto_recent_talk">최신톡</string>
+    <string name="oto_publictalk_exit_msg">대화방을 나가신 후에도 이 대화방의 메시지를 받으시겠습니까?</string>
+    
+    <string name="oto_invite_management_1">초대 관리</string>
+    <string name="oto_invite_management_2">채팅 초대 받지않음</string>
+    <string name="oto_invite_management_3">친구에게만 채팅 초대 받음</string>
+    <string name="oto_cannot_kick_admin">운영자를 강제퇴장 시킬 수 없습니다.</string>
+    <string name="oto_insert_room_name">방이름을 입력하세요.</string>
+    
+    <string name="oto_deny_inviation_msg">초대한 유저중 일부는 초대 거부 설정을 해놨기 때문에 초대 할 수 없었습니다.</string>
+    <string name="oto_invite_low_version">초대한 유저중 일부는 버전이 낮아서 초대 할 수 없었습니다.</string>
+	<string name="oto_low_version_and_deny_inviation_msg">초대한 유저중 일부는 초대 거부 설정을 해놨기 때문에 초대 할 수 없었고 일부는 버전이 낮아서 초대 할 수 없었습니다.</string>
+    
+    <string name="oto_public_room_cannot_make_more">1인당 만들 수 있는 공개오픈톡방의 갯수를 초과 했습니다.</string>
+    <string name="oto_public_opentalk">공개오픈톡</string>
+    <string name="oto_room_name">방이름</string>
+    <string name="oto_private_room_label">개인 대화방</string>
+    <string name="oto_public_room_label">참가중인 공개오픈톡</string>
+    <string name="oto_room_is_hidden">이 대화방은 비공개 상태입니다.</string>
+    <string name="oto_opentalkon_ad">실시간 대화방과 커뮤니티를 개발 없이 당신의 앱에 추가하세요!</string>
+    
+    <string name="oto_img_size_limit">10MB이상의 사진은 첨부하실수 없습니다.</string>
+    <string name="oto_input_id">닉네임을 입력해주세요.</string>
+    <string name="oto_add_friend_alert">현재 사용하고 계신 앱의 사용자만 검색이 가능합니다.</string>
+    <string name="oto_add_friend_alert2">해당 사용자가 없거나 검색이 허용되지 않은 사용자입니다.</string>
+    
+    <string name="oto_go_market">안드로이드 마켓</string>
+    <string name="oto_go_opentalk">오픈톡 둘러보기</string>
+    <string name="oto_need_pictrue">이 오픈톡은 최소 사진 1장을 첨부해야 글 작성이 가능합니다.</string>
+    <string name="oto_select_category">카테고리 선택</string>
+    <string name="oto_see_more_app">다른앱 보기</string>
+    <string name="oto_user_limit_exceed">오픈톡온 일일 트래픽이 초과되어서\n금일은 오픈톡온 서비스를 이용하실수 없거나, 해당앱의 오픈톡온 서비스가 만료된 상태입니다. \n해당앱의 관리자에게 문의하시기 바랍니다.</string>
+    
+	<string name="oto_setting_chat_notification">대화 알림</string>
+    <string name="oto_setting_opentalk_option1">새글 알림</string>
+    <string name="oto_setting_opentalk_option2">내글의 좋아요 알림</string>
+    <string name="oto_setting_opentalk_option3">내글의 댓글 알림</string>
+    <string name="oto_setting_opentalk_option4">댓글 작성한 글의 댓글 알림</string>
+    
+    <string name="oto_app_code_is_not_valid">해당 앱을 이용하시려면 마켓에서 다운받으시면 됩니다.</string>
+    
+    <string name="oto_done">완료</string>
+    <string name="oto_write_post">글쓰기</string>
+    <string name="oto_agreement_agree_check">이용약관 및 개인정보 취급방침에 동의 하셔야합니다.</string>
+    <string name="oto_select_multiple_picture">앨범에서 사진 선택(여러장)</string>
+    <string name="oto_conv_detail_admin_only">운영진만 글을 쓸 수 있습니다.</string>
+	<string name="oto_email_title">[오픈토크온 고객 지원]</string>
+    <string name="oto_none">해당없음</string>
+    <string name="oto_nick_name">닉네임</string>
+    <string name="oto_nick_name_already">닉네임이 이미 사용중 입니다.</string>
+    <string name="oto_nick_name_alert">페이스북 로그인은 필수 사항이 아닙니다. \n닉네임만 입력하시면 손쉽게 이용 가능합니다.</string>
+    <string name="oto_app_token_is_not_valid">앱토큰이 올바르지 않습니다.</string>
+    <string name="oto_image_count_detail">외 %d장</string>
+    <string name="oto_context_menu_1">촬영</string>
+    <string name="oto_context_menu_2">사진 한 장</string>
+    <string name="oto_context_menu_3">사진 여러 장</string>
+    <string name="oto_context_menu_4">초대</string>
+    <string name="oto_context_menu_5">알림 켜기</string>
+    <string name="oto_context_menu_5_sub">알림 끄기</string>
+    <string name="oto_context_menu_6">나가기</string>
+    
+	<string name="oto_day_best_like">일간 베스트글</string>
+	<string name="oto_week_best_like">주간 베스트글</string>
+	<string name="oto_month_best_like">월간 베스트글</string>
+    
+    <string name="oto_com_conv_search_empty">검색결과가 존재하지 않습니다.</string>
+    <string name="oto_ignore_list_empty">차단 목록이 존재하지 않습니다.</string>
+    <string name="oto_exit_room">대화방 퇴장</string>
+    <string name="oto_picture_limit">사진은 최대 10장까지 전송 가능합니다.</string>
+    
+    <string name="oto_write_limit_error">짧은시간에 너무 많은 글을 썼습니다.\n잠시후 다시 시도하세요.</string>
+    
+    <string name="oto_tab_my_word">내가 쓴글 보기</string>
+    <string name="oto_tab_my_reply">댓글 단글 보기</string>
+    <string name="oto_exit_room_caution">대화방을 나가시겠습니까?\n이전의 대화내용은 모두 삭제됩니다.</string>
+    
+    <string name="oto_not_exist_picture">사진이 없습니다.\nSD카드 연결을 해제하세요.</string>
+    
+    <string name="oto_deleted_post">삭제된 글 입니다.</string>
+    <string name="oto_delete_post_question">해당 글을 삭제 하시겠습니까?</string>
+    <string name="oto_community_notification">새로운 오픈톡글이 있습니다.</string>
+    <string name="oto_like_notification">%s님이 회원님의 글을 좋아합니다.</string>
+    <string name="oto_reply_notification">%s님이 회원님의 글에 댓글을 달았습니다.</string>
+    <string name="oto_reply_notification2">%s님이 댓글을 달았습니다.</string>
+    
+    <string name="oto_reply_deleted">해당 댓글은 작성자에 의해 삭제 되었습니다.</string>
+    <string name="oto_likecnt_string">회원님 외 %d명이 좋아합니다.</string>
+    <string name="oto_likecnt_string2">%d명이 좋아합니다.</string>
+    <string name="oto_likecnt_string3">회원님이 좋아합니다.</string>
+    
+    <string name="oto_unknown">알수없음</string>
+    <string name="oto_delete_reply">댓글 삭제</string>
+    <string name="oto_delete_reply_description">댓글을 삭제하시겠습니까?</string>
+    <string name="oto_reply_send">작성</string>
+    <string name="oto_reply">댓글</string>
+    <string name="oto_like">좋아요</string>
+    <string name="oto_cancel_like">좋아요 취소</string>
+    <string name="oto_word">내용</string>
+    <string name="oto_close">닫기</string>
+    
+    <string name="oto_block_friend">사용자를 차단했습니다.</string>
+    <string name="oto_add_friend_success">친구를 추가 했습니다.</string>
+    <string name="oto_add_friend_fail">친구 추가 실패</string>
+    
+    <string name="oto_friend_popup_talk">1:1 대화 하기</string>
+    <string name="oto_friend_popup_add_bookmark">즐겨찾기 추가</string>
+    <string name="oto_friend_popup_del_bookmark">즐겨찾기 삭제</string>
+    <string name="oto_friend_popup_add_friend">친구 추가</string>
+    <string name="oto_friend_popup_block">차단하기</string>
+    <string name="oto_friend_popup_unblock">차단해제</string>
+    <string name="oto_friend_popup_profile">프로필 설정</string>
+    <string name="oto_friend_popup_my_word">내글보기</string>
+    
+    <string name="oto_context_menu_com_1">촬영</string>
+    <string name="oto_context_menu_com_2">사진 한 장</string>
+    <string name="oto_context_menu_com_3">사진 여러 장</string>
+    <string name="oto_context_menu_com_4">검색</string>
+    <string name="oto_context_menu_com_5">내 글 보기</string>
+    <string name="oto_context_menu_com_6">알림 켜기</string>
+    <string name="oto_context_menu_com_6_sub">알림 끄기</string>
+    <string name="oto_context_menu_com_7">베스트글</string>
+    <string name="oto_context_menu_com_8">나가기</string>
+    
+    <string name="oto_friend_tab_1">오픈톡</string>
+    <string name="oto_friend_tab_2">친구</string>
+    <string name="oto_friend_tab_3">대화</string>
+    <string name="oto_friend_tab_4">더보기</string>
+    
+    <string name="oto_friend_label_1">즐겨찾기(%d)</string>
+    <string name="oto_friend_label_2">친구(%d)</string>
+    
+    <string name="oto_invite_label_1">대화중인 사용자(%d)</string>
+    <string name="oto_invite_label_2">친구 초대</string>
+    
+    <string name="oto_wait_moment">잠시만 기다려주세요.</string>
+    <string name="oto_sd_card_not_found">SD카드를 사용할 수 없는 상태입니다.</string>
+    <string name="oto_sd_card_save_image_ok">%s에 이미지 파일이 저장되었습니다.</string>
+    <string name="oto_sd_card_save_image_fail">이미지 파일 저장에 실패했습니다.</string>
+    
+    <string name="oto_register_userid">닉네임 등록</string>
+    <string name="oto_notification_message_popup">새로운 메시지가 도착했습니다.</string>
+    <string name="oto_insert_message_hint">메시지를 입력하시려면 여기를 누르세요.</string>
+    
+    
+    <string name="oto_add_best_friend">즐겨찾기 추가</string>
+    <string name="oto_del_best_friend">즐겨찾기 삭제</string>
+    <string name="oto_add_friend_at_least_one">최소 1명을 선택해야 합니다.</string>
+    
+    
+    <string name="oto_network_fail">네트워크 상태가 좋지 않습니다.\n나중에 다시 시도해주세요.</string>
+    
+    <string name="oto_register_user_id_already_exist">이미 존재하는 닉네임입니다.</string>
+    
+    
+    <string formatted="false" name="oto_invite_msg_single">%s님이 %s님을 초대했습니다.</string>
+    <string formatted="false" name="oto_invite_msg">%s님이 %s외의 %d명을 초대했습니다.</string>
+    
+    <string name="oto_success_register_user_id">성공적으로 닉네임을 변경했습니다.</string>
+    <string name="oto_register_user_id_length_limit">닉네임의 길이는 4글자 이상으로 설정해주세요.</string>
+    
+    <string name="oto_select_introduce">자기 소개</string>
+    
+    <string name="oto_modify_image">편집</string>
+    
+    
+        
+    <string name="oto_select_recommend_task">작업 선택</string>
+   
+    
+    <string name="oto_new_chat">새로운 대화</string>
+    <string name="oto_add_chat_users">대화 상대 추가</string>
+	<string name="oto_delete">삭제</string>
+	<string name="oto_message_re_send">재전송</string>
+	<string name="oto_message_resend">메시지 재전송</string>
+	<string name="oto_message_resend_popup">재전송 시도 하시겠습니까?</string>
+	<string name="oto_resend_or_remove">재전송/삭제</string>
+	<string name="oto_sending">전송중</string>
+	<string name="oto_conv_list_modify">대화내역</string>
+	<string name="oto_group_chat">그룹채팅</string>
+	
+	<string name="oto_cancel">취소</string>
+    <string name="oto_confirm">확인</string>
+    <string name="oto_pre_seconds">초 전</string>
+    <string name="oto_pre_minutes">분 전</string>
+    <string name="oto_pre_hours">시간 전</string>
+    
+    <string name="oto_friend_not_exist"> 등록된 친구가 없습니다.</string>
+    <string name="oto_networking">데이터 요청 중 입니다.</string>
+    <string name="oto_conv_not_exist">진행중인 대화가 없습니다.</string>
+    
+    <string name="oto_token_is_not_valid_popup">인증 정보가 올바르지 않습니다. 이전 인증정보가 삭제되었습니다.</string>
+    <string name="oto_exit">나가기</string>
+    
+    <string name="oto_my_profile">내 프로필</string>
+    <string name="oto_banned_friends">친구 관리</string>
+    <string name="oto_banned_friends_list">차단 친구 목록</string>
+    
+    <string name="oto_opentalk_notification">오픈톡 알림 설정</string>
+    <string name="oto_chat_notification">대화 알림 설정</string>
+    <string name="oto_opentalkon_info">오픈톡온 정보</string>
+    <string name="oto_opentalkon_info_version">버전 정보</string>
+    <string name="oto_info_asking_mail">문의 메일</string>
+    <string name="oto_info_mail">support@opentalkon.com</string>
+    <string name="oto_info_homepage">홈페이지</string>
+    <string name="oto_info_homepage_address">http://www.opentalkon.co.kr</string>
+    <string name="oto_info_facebook_page_id">1382990801968402</string>
+    <string name="oto_info_opentalkon_service">오픈톡온은 본 어플리케이션에 추가적으로 제공되는 부가 기능 서비스입니다</string>
+    
+    <string name="oto_add_picture">사진 추가</string>
+    <string name="oto_chat_nick_name">닉네임</string>
+    <string name="oto_success_modify_user_info_popup">사용자 정보를 성공적으로 수정 했습니다.</string>
+    
+    <string name="oto_exit_chat_room_msg">"%s"님이 대화방을 나갔습니다.</string>
+    <string name="oto_enter_chat_room_msg">"%s"님이 대화방에 입장했습니다.</string>
+    <string name="oto_change_moderator_msg">"%s"님이 방장이 되었습니다.</string>
+    <string name="oto_kick_single_msg">"%s"님이 강제퇴장 되었습니다.</string>
+    <string formatted="false" name="oto_kick_multiple_msg">"%s"님 외 %d명이 강제퇴장 되었습니다.</string>
+    <string name="oto_room_private_msg">방이 비공개로 설정 되었습니다.</string>
+    <string name="oto_room_public_msg">방이 공개로 설정 되었습니다.</string>
+    <string name="oto_already_kicked">방장에 의해 강제퇴장된 방입니다.</string>
+    
+    <string name="oto_register">회원가입</string>
+    <string name="oto_next">다음</string>
+    
+    <string name="oto_empty_chat_nick_name">닉네임을 입력하세요.</string>
+    
+    <string name="oto_chat_one_to_one">1:1대화</string>
+    <string name="oto_del_friend">친구삭제</string>
+    
+    <string name="oto_cannot_del_friend_myself">자기자신을 친구로 삭제할수 없습니다.</string>
+    <string name="oto_not_friend">친구가 아닙니다.</string>
+    <string name="oto_invalid_friend">잘못된 친구 입니다.</string>
+    
+    <string name="oto_picture">사진</string>
+    					
+</resources>

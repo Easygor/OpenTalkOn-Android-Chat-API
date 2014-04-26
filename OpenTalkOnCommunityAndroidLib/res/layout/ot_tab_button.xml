@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:paddingTop="8dp"
+		android:paddingBottom="5dp"
+		android:layout_gravity="center"
+		android:orientation="vertical">
+	    <ImageView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:adjustViewBounds="true"
+		    android:layout_weight="1.0"
+		    android:id="@+id/oto_main_button_image_t"
+		    android:layout_gravity="center"/>
+	    <TextView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:adjustViewBounds="true"
+		    android:id="@+id/oto_main_button_image_b"
+		    android:layout_marginBottom="2dp"
+		    android:layout_marginLeft="2dp"
+		    android:layout_marginRight="2dp"
+		    android:textSize="10sp"
+		    android:gravity="center"
+		    android:layout_gravity="center"/>
+	</LinearLayout>
+
+	<TextView
+	    android:id="@+id/oto_main_button_new_count"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="right|top"
+	    android:layout_marginRight="5dp"
+	    android:layout_marginTop="5dp"
+	    android:background="@drawable/oto_type_text_background"
+	    android:paddingLeft="4dp"
+	    android:paddingRight="4dp"
+	    android:textSize="10sp"
+	    android:text="20"
+	    android:textColor="@android:color/white" />
+
+</FrameLayout>

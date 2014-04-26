@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/oto_top">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/oto_text_reverse_color"
+            android:layout_gravity="center"
+            android:id="@+id/oto_base_tab_title"
+            android:text="@string/oto_lib_name"/>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="right">
+	        <View android:layout_width="2px"
+	            android:layout_height="32dp"
+	            android:layout_gravity="center_vertical"
+	            android:background ="@drawable/oto_top_line"/>
+	        <FrameLayout android:layout_width="40dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/oto_top_btn_selector"
+	            android:id="@+id/oto_main_cancel_button">
+		        <ImageView android:layout_width="20dp"
+		            android:layout_height="20dp"
+		            android:layout_gravity="center"
+		            android:background="@drawable/oto_close"/>
+	        </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+    
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_weight="1.0"
+           android:background="#ffffff"
+           android:orientation="vertical" >
+           
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:background="#f0f0f0"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+	        <FrameLayout android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="10dp"
+		        android:layout_gravity="center_vertical">
+		        <ImageView android:layout_width="70dp"
+		            android:layout_height="70dp"
+		            android:layout_gravity="center"
+		            android:id="@+id/oto_myprofile_image"
+		            android:scaleType="fitXY"
+		            android:background="#f0f0f0"
+		            android:src="@drawable/oto_friend_img_01"/>
+		        <TextView android:layout_width="70dp"
+		            android:layout_height="18dp"
+		            android:layout_gravity="bottom|center_horizontal"
+		            android:text="@string/oto_modify_image"
+		            android:textColor="@android:color/white"
+		            android:textSize="10sp"
+		            android:gravity="center"
+		            android:layout_marginBottom="5dp"
+		            android:background ="#55000000"/>
+	        </FrameLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="@string/oto_chat_nick_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/oto_myprofile_nickname"
+                    android:layout_width="180dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oto_bar_text_box"
+                    android:ems="16"
+                    android:hint="@string/oto_chat_nick_name"
+                    android:maxLength="16" >
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+		</LinearLayout>
+		
+	    <ImageView android:layout_height="1px"
+	        android:layout_width="fill_parent"
+	        android:background="#8791a1"/>
+
+		<FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:background="#f0f0f0">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/oto_select_introduce"
+                    android:textSize="15dp"
+                    android:textColor="#414f5a"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/oto_myprofile_introduce"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/oto_bar_text_box"
+                    android:gravity="left|top"
+                    android:maxLength="60"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+           </FrameLayout>
+           
+		<ImageView android:layout_height="1px"
+	        android:layout_width="fill_parent"
+	        android:background="#8791a1"/>
+		<FrameLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/oto_list_btn_background_pressed"
+            android:padding="20dp">
+		    <TextView android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:textSize="14dp"
+	            android:textColor="@color/oto_text_sub_color"
+	            android:text="@string/oto_nick_name_alert"/>
+		</FrameLayout>
+		<View android:layout_height="1px" android:layout_width="fill_parent" android:background="#c4c4c4"/>
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="40dp"
+	        android:background="#FFFFFF"
+	        android:layout_gravity="center"
+	        android:id="@+id/oto_oto_setting_terms_of_use"
+	        android:gravity="center"
+	        android:orientation="horizontal">
+               <ImageView android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:paddingRight="5dp"
+                   android:id="@+id/oto_myprofile_agreement_check"
+                   android:src="@drawable/oto_check_n"/>
+               <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#0000ff"
+                   android:textSize="15dp"
+                   android:id="@+id/oto_myprofile_agreement1"
+                   android:layout_marginRight="4dp"
+                   android:text="@string/oto_terms_of_use"/>
+               <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000000"
+                   android:textSize="15dp"
+                   android:layout_marginRight="4dp"
+                   android:text="@string/oto_and"/>
+               <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#0000ff"
+                   android:id="@+id/oto_myprofile_agreement2"
+                   android:textSize="15dp"
+                   android:layout_marginRight="4dp"
+                   android:text="@string/oto_privacy_policy"/>
+               <TextView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/oto_myprofile_agreement_ok"
+                   android:textColor="#000000"
+                   android:textSize="15dp"
+                   android:text="@string/oto_agree"/>
+	    </LinearLayout>			
+	    <ImageView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/oto_facebook_login_selector"
+              android:id="@+id/oto_oto_setting_facebook"
+              android:clickable="true"
+              android:layout_gravity="center"
+              android:layout_margin="1dp"/>
+       </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:background="@drawable/oto_base_list_elem_selector"
+	    android:orientation="horizontal"
+	    android:clickable="false">
+
+        <Button
+            android:id="@+id/oto_myprofile_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/oto_base_btn_selector"
+            android:text="@string/oto_cancel"
+            android:textColor="@drawable/oto_base_btn_text_selector"
+            android:textSize="15sp" />
+
+	    <Button
+	        android:id="@+id/oto_myprofile_next"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1.0"
+	        android:background="@drawable/oto_base_btn_selector"
+	        android:text="@string/oto_next"
+	        android:textColor="@drawable/oto_base_btn_text_selector"
+	        android:textSize="15sp" />
+
+	</LinearLayout>
+</LinearLayout>

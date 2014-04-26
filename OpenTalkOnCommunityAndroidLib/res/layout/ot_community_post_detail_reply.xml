@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:paddingLeft="10dp"
+	    android:orientation="horizontal"
+	    android:background="@android:color/white">
+	    <FrameLayout android:layout_width="50dp"
+	        android:layout_height="50dp"
+		    android:layout_gravity="left|top">
+		    <ImageView android:id="@+id/oto_reply_img"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:scaleType="fitXY"
+				android:padding="2dp"/>
+	    </FrameLayout>
+	    
+	    <LinearLayout android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    android:layout_gravity="center_vertical">
+		    <RelativeLayout android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1.0">
+                <TextView
+                    android:id="@+id/oto_reply_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+			    <TextView android:id="@+id/oto_reply_body" 
+			        android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/oto_reply_nickname"
+					android:layout_marginTop="5dip"
+					android:text="내용"
+					android:textColor="#181818"
+					android:textSize="12dp"/>
+		    </RelativeLayout>
+		    <FrameLayout android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:layout_marginRight="5dp">
+			    <LinearLayout android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_gravity="right|top"
+			        android:gravity="center_vertical">
+					<TextView android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:id="@+id/oto_reply_time"
+					    android:text="20분 전"
+					    android:textColor="#787878"
+					    android:layout_marginRight="8dp"
+					    android:textSize="12sp"/>
+				    <ImageView android:layout_width="22dp"
+				        android:id="@+id/oto_reply_close" 
+				        android:layout_height="22dp"
+				        android:src="@drawable/oto_close_dark"/>
+			    </LinearLayout>
+		    </FrameLayout>
+	    </LinearLayout>
+	</LinearLayout>
+	<View android:layout_width="fill_parent" android:layout_height="1px" android:background="#c4c4c4"/>
+</LinearLayout>

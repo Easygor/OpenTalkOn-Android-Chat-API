@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    
+	<string-array name="oto_chat_msg_menu">
+	    <item>복사</item>
+	</string-array>
+    
+	<string-array name="oto_post_item_method">
+	    <item>앨범에서 선택</item>
+	    <item>사진 촬영</item>
+	    <item>삭제</item>
+	</string-array>
+	
+	<string-array name="oto_conv_list_modify_method">
+	    <item>대화방 나가기</item>
+	</string-array>
+	
+	<string-array name="oto_public_room_management_private">
+	    <item>사용자 강제 퇴장</item>
+	    <item>방장 권한 주기</item>
+	    <item>채팅방을 비공개</item>
+	</string-array>
+	
+	<string-array name="oto_public_room_management_public">
+	    <item>사용자 강제 퇴장</item>
+	    <item>방장 권한 주기</item>
+	    <item>채팅방을 공개</item>
+	</string-array>
+	
+	<string-array name="oto_user_list_method">
+	    <item>친구삭제</item>
+	</string-array>
+</resources>

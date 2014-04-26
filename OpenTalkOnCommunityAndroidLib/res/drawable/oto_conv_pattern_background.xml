@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="#fdf0c3"/>
+	</item>
+	<item>
+	    <bitmap android:tileMode="repeat"
+	        android:src="@drawable/oto_background_pattern"/>
+	</item>
+</layer-list>

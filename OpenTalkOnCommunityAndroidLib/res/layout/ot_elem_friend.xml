@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/oto_friend_list_elem_layout_1"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/oto_main_background"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="1dp" >
+
+        <TextView
+            android:id="@+id/oto_friend_list_elem_layout_1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/oto_text_main_color"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+    	android:layout_height="60dp"
+    	android:orientation="horizontal"
+    	android:id="@+id/oto_friend_list_elem_layout_2"
+    	android:clickable="true"
+    	android:background="@drawable/oto_list_btn_friend_selector">
+        <RelativeLayout android:layout_width="40dp"
+		    android:layout_height="fill_parent"
+		    android:padding="5dip"
+		    android:id="@+id/oto_friend_list_elem_check_layout"
+		    android:layout_marginLeft="5dp">
+		    <ImageView android:layout_width="wrap_content"
+		        android:layout_height="30dp"
+		        android:layout_centerInParent="true"
+		        android:scaleType="fitCenter"
+		        android:id="@+id/oto_friend_list_elem_check"
+		        android:src="@drawable/oto_check_n"/>
+		</RelativeLayout>
+		<RelativeLayout android:layout_width="60dp"
+		    android:layout_height="fill_parent"
+		    android:padding="5dip">
+		    <ImageView android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:focusable="false"
+		        android:scaleType="fitXY"
+		        android:src="@drawable/oto_friend_img_01"
+	    		android:padding="2dp"
+		        android:id="@+id/oto_friend_list_elem_left_img"/>
+		</RelativeLayout>
+		<LinearLayout android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:paddingRight="5dp"
+		    android:paddingTop="5dp"
+		    android:paddingBottom="5dp">
+			<LinearLayout android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:orientation="horizontal"
+			    android:gravity="center_vertical"
+			    android:layout_weight="1.0">
+				<TextView android:textColor="@android:color/black"
+				    android:textSize="12sp"
+				    android:id="@+id/oto_friend_list_elem_id"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_vertical"/>
+			    <FrameLayout android:layout_width="fill_parent"
+				    android:layout_height="fill_parent">
+				    <TextView android:layout_width="wrap_content"
+				        android:layout_marginLeft="10dp"
+				        android:padding="5dp"
+				    	android:layout_height="wrap_content"
+				    	android:layout_gravity="center_vertical|right"
+				    	android:background="@drawable/oto_base_roundbtn_background"
+				    	android:id="@+id/oto_friend_list_elem_locale"
+				    	android:textSize="11dp"
+				    	android:maxLines="2"
+				    	android:ellipsize="end"
+				    	android:textColor="@color/oto_text_sub_color"/>
+			    </FrameLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

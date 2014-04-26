@@ -1,0 +1,295 @@
+<resources>
+
+    <string name="oto_lib_name">OpenTalkOn</string>
+    <string name="oto_year">Year</string>
+    <string name="oto_month">Month</string>
+    <string name="oto_day">Day</string>
+    <string name="oto_day_of_week">dd</string>
+    <string name="oto_send">Send</string>
+    <string name="oto_save_picture">Save Picture</string>
+    <string name="oto_not_authorize">Not authorized.</string>
+    <string name="oto_app_deleted">OpenTalkOn feature is not available for use anymore.</string>
+    <string name="oto_clear_all">Clear all</string>
+	<string name="oto_terms_of_use">Terms of Use</string>
+    <string name="oto_privacy_policy">Privacy Policy</string>
+    <string name="oto_and">and</string>
+    <string name="oto_agree">Agree</string>
+    <string name="oto_like_people">People who like this</string>
+    <string name="oto_facebook_login_ok">You has successfully logon with facebook!</string>
+    <string name="oto_facebook_public_conditon">Make public Facebook Page</string>
+    <string name="oto_facebook_page">Facebook Page</string>
+    <string name="oto_notification">Notifications</string>
+    <string name="oto_notification_empty">There is no notifications.</string>
+    <string name="oto_management">Management</string>
+    
+    <string name="oto_go_community">Go Community</string>
+    <string name="oto_go_chatroom">Go ChatRoom</string>
+    
+	<string name="oto_yes">Yes</string>
+    <string name="oto_no">No</string>
+    
+    <string name="oto_verify_phone">Verify PhoneNumber</string>
+    <string name="oto_point">Recent Point</string>
+    
+    <string name="oto_recent_talk">Newly Talk</string>
+    <string name="oto_publictalk_exit_msg">Even after you have left the chat room, you want to receive messages of this chat room?</string>
+    <string name="oto_invite_management_1">Chatting Invitation</string>
+    <string name="oto_invite_management_2">Prohibit all invitation</string>
+    <string name="oto_invite_management_3">Invitation from friends only</string>
+    <string name="oto_cannot_kick_admin">You cannot kick administrator.</string>
+    <string name="oto_insert_room_name">Insert a room name.</string>
+    
+    <string name="oto_deny_inviation_msg">Some of the invited user cannot invite due to prohibit invitation.</string>
+    <string name="oto_invite_low_version">Some of the invited app version of user is low. so some of user could not be invited.</string>
+    <string name="oto_low_version_and_deny_inviation_msg">Some of the invited user cannot invite due to prohibit invitation and Some of the invited app version of user is low.</string>
+    
+    <string name="oto_public_room_cannot_make_more">You have exceeded the number of public opentalks that can make one person.</string>
+    <string name="oto_public_opentalk">PublicTalk</string>
+    <string name="oto_room_name">Room Name</string>
+    <string name="oto_private_room_label">Private ChatRoom</string>
+    <string name="oto_public_room_label">Public OpenTalkRoom</string>
+    <string name="oto_room_is_hidden">This room has set hidden.</string>
+    
+    <string name="oto_opentalkon_ad">Add a Live Chat Feature on your App, without any development</string>
+    <string name="oto_img_size_limit">You cannot attach pictures over 10MB.</string>
+    <string name="oto_input_id">Search by NickName.</string>
+    <string name="oto_add_friend_alert">You can only search users who are currently using this app.</string>
+    <string name="oto_add_friend_alert2">There is no such user or the user cannot be searched.</string>
+    
+    <string name="oto_go_market">Android Market</string>
+    <string name="oto_go_opentalk">Browse OpenTalk</string>
+    <string name="oto_need_pictrue">You must attach at least 1 picture to write on this OpenTalk.</string>
+    <string name="oto_select_category">Select Category</string>
+    <string name="oto_see_more_app">See more Apps</string>
+    <string name="oto_user_limit_exceed">You cannot use the OpenTalkOn service today\nbecause OpenTalkOn has exceeded the daily traffic or OpenTalkOn Service of this app has expired. \n Please ask the App manager.</string>
+    
+	<string name="oto_setting_chat_notification">Chat notification</string>
+    <string name="oto_setting_opentalk_option1">New post alert</string>
+    <string name="oto_setting_opentalk_option2">Like alert</string>
+    <string name="oto_setting_opentalk_option3">Comment alert</string>
+    <string name="oto_setting_opentalk_option4">Comment alert on my comments</string>
+    
+    <string name="oto_app_code_is_not_valid">Download this App from the Android market to use.</string>
+    
+    <string name="oto_done">Post</string>
+    <string name="oto_write_post">Write Post</string>
+    <string name="oto_agreement_agree_check">You must agree with the terms of use and privacy policy.</string>
+    <string name="oto_select_multiple_picture">Photo from album(Multiple)</string>
+    <string name="oto_conv_detail_admin_only">Only the manager can post notices.</string>
+	<string name="oto_email_title">[OpenTalkOn Customer Support]</string>
+    <string name="oto_none">N/A</string>
+    <string name="oto_nick_name">NickName</string>
+    <string name="oto_nick_name_already">The NickName is currently in use.</string>
+    <string name="oto_nick_name_alert">Facebook login is not always required. \nYou can enter nickname only to use.</string>
+    <string name="oto_app_token_is_not_valid">App Token is not valid.</string>
+    <string name="oto_image_count_detail">and %d more photos</string>
+    <string name="oto_context_menu_1">Take a photo</string>
+    <string name="oto_context_menu_2">One photo</string>
+    <string name="oto_context_menu_3">Photos</string>
+    <string name="oto_context_menu_4">Invite</string>
+    <string name="oto_context_menu_5">Turn on alert</string>
+    <string name="oto_context_menu_5_sub">Turn off alert</string>
+    <string name="oto_context_menu_6">Exit</string>
+    
+	<string name="oto_day_best_like">Daily Best Posts</string>
+	<string name="oto_week_best_like">Weekly Best Posts</string>
+	<string name="oto_month_best_like">Monthly Best Posts</string>
+    
+    <string name="oto_com_conv_search_empty">The search result does not exist.</string>
+    <string name="oto_ignore_list_empty">The block list is empty.</string>
+    <string name="oto_exit_room">Exit room</string>
+    <string name="oto_picture_limit">A maximum of 10 photos can be sent.</string>
+    
+    <string name="oto_write_limit_error">You have written too many posts in a short time.\nPlease try again later.</string>
+    
+    <string name="oto_tab_my_word">My posts</string>
+    <string name="oto_tab_my_reply">My comments</string>
+    <string name="oto_exit_room_caution">Are you sure you want to leave this chatroom?\nIf you leave, this chatroom and message history will be deleted.</string>
+    
+    <string name="oto_not_exist_picture">No photos exist.\nPlease disconnect the SD card.</string>
+    
+    <string name="oto_deleted_post">The post is deleted.</string>
+    <string name="oto_delete_post_question">Will you delete this post?</string>
+    <string name="oto_community_notification">There is a new OpenTalkOn post.</string>
+    <string name="oto_like_notification">%s likes your post.</string>
+    <string name="oto_reply_notification">%s has commented on your post.</string>
+    <string name="oto_reply_notification2">%s has posted a comment.</string>
+    
+    <string name="oto_reply_deleted">This comment has been deleted by the user.</string>
+    <string name="oto_likecnt_string">You and %d others like this post.</string>
+    <string name="oto_likecnt_string2">%d users like this post.</string>
+    <string name="oto_likecnt_string3">You like this post.</string>
+    
+    <string name="oto_unknown">Unknown</string>
+    <string name="oto_delete_reply">Delete Comment</string>
+    <string name="oto_delete_reply_description">Will you delete this comment?</string>
+    <string name="oto_reply_send">Send</string>
+    <string name="oto_reply">Comment</string>
+    <string name="oto_like">Like</string>
+    <string name="oto_cancel_like">Cancel like</string>
+    <string name="oto_word">Contents</string>
+    <string name="oto_close">Close</string>
+    
+    <string name="oto_block_friend">You have blocked the user.</string>
+    <string name="oto_add_friend_success">You have added a friend.</string>
+    <string name="oto_add_friend_fail">Adding friend has failed</string>
+    
+    <string name="oto_friend_popup_talk">1:1 Chat</string>
+    <string name="oto_friend_popup_add_bookmark">Add to Favorites</string>
+    <string name="oto_friend_popup_del_bookmark">Delete from Favorites</string>
+    <string name="oto_friend_popup_add_friend">Add Friend</string>
+    <string name="oto_friend_popup_block">Block</string>
+    <string name="oto_friend_popup_unblock">Unblock</string>
+    <string name="oto_friend_popup_profile">Profile Setting</string>
+    <string name="oto_friend_popup_my_word">See my posts</string>
+    
+    <string name="oto_context_menu_com_1">Take a photo</string>
+    <string name="oto_context_menu_com_2">One photo</string>
+    <string name="oto_context_menu_com_3">Photos</string>
+    <string name="oto_context_menu_com_4">Search</string>
+    <string name="oto_context_menu_com_5">See my posts</string>
+    <string name="oto_context_menu_com_6">Turn on alert</string>
+    <string name="oto_context_menu_com_6_sub">Turn off alert</string>
+    <string name="oto_context_menu_com_7">Best Posts</string>
+    <string name="oto_context_menu_com_8">Exit</string>
+    
+    <string name="oto_friend_tab_1">OpenTalk</string>
+    <string name="oto_friend_tab_2">Friends</string>
+    <string name="oto_friend_tab_3">Chats</string>
+    <string name="oto_friend_tab_4">See more</string>
+    
+    <string name="oto_friend_label_1">Favorites(%d)</string>
+    <string name="oto_friend_label_2">Friends(%d)</string>
+    
+    <string name="oto_invite_label_1">Users in chatroom(%d)</string>
+    <string name="oto_invite_label_2">Invite friend</string>
+    
+    <string name="oto_wait_moment">Please wait a moment.</string>
+    <string name="oto_sd_card_not_found">The SD card cannot be found.</string>
+    <string name="oto_sd_card_save_image_ok">The image file has been saved in %s.</string>
+    <string name="oto_sd_card_save_image_fail">Saving image file has failed.</string>
+    
+    <string name="oto_register_userid">Register NickName</string>
+    <string name="oto_notification_message_popup">A new message has arrived.</string>
+    <string name="oto_insert_message_hint">Touch here to write a message.</string>
+    
+    
+    <string name="oto_add_best_friend">Add to Favorites</string>
+    <string name="oto_del_best_friend">Delete from Favorites</string>
+    <string name="oto_add_friend_at_least_one">At least 1 user must be selected.</string>
+    
+    
+    <string name="oto_network_fail">The network status is currently poor.\nPlease try again later.</string>
+    
+    <string name="oto_register_user_id_already_exist">The NickName exists.</string>
+    
+    
+    <string formatted="false" name="oto_invite_msg_single">%s has invited %s.</string>
+    <string formatted="false" name="oto_invite_msg">%s has invited %s and %d other users.</string>
+    
+    <string name="oto_success_register_user_id">Congratulations! You have changed your NickName.</string>
+    <string name="oto_register_user_id_length_limit">The NickName must be at least 4 characters long.</string>
+    
+    <string name="oto_select_introduce">Status</string>
+    
+    <string name="oto_modify_image">Modify</string>
+    
+    
+        
+    <string name="oto_select_recommend_task">Select Task</string>
+   
+    
+    <string name="oto_new_chat">New chat</string>
+    <string name="oto_add_chat_users">Add chat users</string>
+	<string name="oto_delete">Delete</string>
+	<string name="oto_message_re_send">Resend</string>
+	<string name="oto_message_resend">Resend message</string>
+	<string name="oto_message_resend_popup">Will you resend the message?</string>
+	<string name="oto_resend_or_remove">Resend/delete</string>
+	<string name="oto_sending">Sending</string>
+	<string name="oto_conv_list_modify">Chat history</string>
+	<string name="oto_group_chat">Group chatting</string>
+	
+	<string name="oto_cancel">Cancel</string>
+    <string name="oto_confirm">Confirm</string>
+    <string name="oto_pre_seconds">secs...</string>
+    <string name="oto_pre_minutes">mins...</string>
+    <string name="oto_pre_hours">hours...</string>
+    
+    <string name="oto_friend_not_exist">You have no friends.</string>
+    <string name="oto_networking">Data is being requested.</string>
+    <string name="oto_conv_not_exist">There is no chatroom.</string>
+    
+    <string name="oto_token_is_not_valid_popup">Authentication information is not valid. Past information has been deleted.</string>
+    <string name="oto_exit">Exit</string>
+    
+    <string name="oto_my_profile">My profile</string>
+    <string name="oto_banned_friends">Manage friends</string>
+    <string name="oto_banned_friends_list">Blocked friend list</string>
+    
+    <string name="oto_opentalk_notification">OpenTalk alert setting</string>
+    <string name="oto_chat_notification">Chat alert setting</string>
+    <string name="oto_opentalkon_info">OpenTalkOn information</string>
+    <string name="oto_opentalkon_info_version">Version Information</string>
+    <string name="oto_info_asking_mail">Support Mail</string>
+    <string name="oto_info_mail">support@opentalkon.com</string>
+    <string name="oto_info_homepage">Homepage</string>
+    <string name="oto_info_homepage_address">http://www.opentalkon.com</string>
+    <string name="oto_info_facebook_page_id">1382990801968402</string>
+    <string name="oto_info_opentalkon_service">OpenTalkOn is an additional service provided to this application</string>
+    
+    <string name="oto_add_picture">Add Photo</string>
+    <string name="oto_chat_nick_name">NickName</string>
+    <string name="oto_success_modify_user_info_popup">User information has been modified.</string>
+    
+    <string name="oto_exit_chat_room_msg">"%s" has left the chatroom.</string>
+    <string name="oto_enter_chat_room_msg">"%s" has entered the chatroom.</string> 
+    <string name="oto_change_moderator_msg">"%s" has become a Moderator of this room.</string>
+    <string name="oto_kick_single_msg">"%s" has kicked.</string>
+    <string formatted="false" name="oto_kick_multiple_msg">"%s" has kicked and %d other users.</string>
+    <string name="oto_room_private_msg">This chatroom has become to private.</string>
+    <string name="oto_room_public_msg">This chatroom has become to public.</string>
+    <string name="oto_already_kicked">You has kicked by moderator of this room.</string>
+    
+    <string name="oto_register">Join</string>
+    <string name="oto_next">Next</string>
+    
+    <string name="oto_empty_chat_nick_name">Input your NickName.</string>
+    
+    <string name="oto_chat_one_to_one">1:1 chat</string>
+    <string name="oto_del_friend">Delete friend</string>
+    
+    <string name="oto_cannot_del_friend_myself">You cannot delete yourself.</string>
+    <string name="oto_not_friend">The user is not your friend.</string>
+    <string name="oto_invalid_friend">The user is invalid.</string>
+    
+    <string name="oto_picture">Photo</string>
+
+    <!-- Face book Resource -->
+	<string name="com_opentalkon_facebook_dialogloginactivity_ok_button">OK</string>
+    <string name="com_opentalkon_facebook_loginview_log_out_button">Log out</string>
+    <string name="com_opentalkon_facebook_loginview_log_in_button">Log in with Facebook</string>
+    <string name="com_opentalkon_facebook_loginview_logged_in_as">Logged in as: %1$s</string>
+    <string name="com_opentalkon_facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    <string name="com_opentalkon_facebook_loginview_log_out_action">Log out</string>
+    <string name="com_opentalkon_facebook_loginview_cancel_action">Cancel</string>
+    <string name="com_opentalkon_facebook_logo_content_description">Facebook Logo</string>
+    <string name="com_opentalkon_facebook_usersettingsfragment_log_in_button">Log in&#8230;</string>
+    <string name="com_opentalkon_facebook_usersettingsfragment_logged_in">Logged in</string>
+    <string name="com_opentalkon_facebook_usersettingsfragment_not_logged_in">Not logged in</string>
+    <string name="com_opentalkon_facebook_placepicker_subtitle_format">%1$s • %2$,d were here</string>
+    <string name="com_opentalkon_facebook_placepicker_subtitle_catetory_only_format">%1$s</string>
+    <string name="com_opentalkon_facebook_placepicker_subtitle_were_here_only_format">%1$,d were here</string>
+    <string name="com_opentalkon_facebook_picker_done_button_text">Done</string>
+    <string name="com_opentalkon_facebook_choose_friends">Choose Friends</string>
+    <string name="com_opentalkon_facebook_nearby">Nearby</string>
+    <string name="com_opentalkon_facebook_loading">Loading...</string>
+    <string name="com_opentalkon_facebook_internet_permission_error_title">AndroidManifest Error</string>
+    <string name="com_opentalkon_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
+    <string name="com_opentalkon_facebook_requesterror_web_login">Your Facebook account is locked. Please log into www.facebook.com to continue.</string>
+    <string name="com_opentalkon_facebook_requesterror_relogin">Please log into this app again to reconnect your Facebook account.</string>
+    <string name="com_opentalkon_facebook_requesterror_password_changed">Your Facebook password has changed. Please log into this app again to reconnect your Facebook account.</string>
+    <string name="com_opentalkon_facebook_requesterror_reconnect">Please log into this app again to reconnect your Facebook account.</string>
+    <string name="com_opentalkon_facebook_requesterror_permissions">This app doesn’t have permission to do this. To change permissions, try logging into the app again.</string>
+    <!-- Face book Resource -->	
+</resources>
