@@ -13,16 +13,16 @@ Description
 
  - [OpenTalkOnAndroidLib](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OpenTalkOnAndroidLib) : The Android-based library should add to your package in order to use Opentalkon API.
 
- - [OTOChatApp](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOChatApp): When you enter other user ID, you can 1:1 chatting in this App.
-<br> (Using only API among the Opentalkon components.)
+ - [OTOChatApp](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOChatApp): Messenger app using all Opentalkon components including API.
+<br> (1) Friend list, Find&Add friend, Favorites
+<br> (2)  1:1 chatting, Group chatting, Photo upload, Push notificaion
+<br> (3)  Change profile, Notificaion settings
 
  - [OTOSimpleChat](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOSimpleChat): When you enter other user ID, you can 1:1 chatting in this App.
 <br> (This App is used the chat rooms offered from the Opentalkon components.)
 
- - [OTOSimpleRawChat](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOSimpleRawChat):Massenger app using all Opentalkon components including API.
-<br> (1) Friend list, Find&Add friend, Favorites
-<br> (2)  1:1 chatting, Group chatting, Photo upload, Push notificaion
-<br> (3)  Change profile, Notificaion settings
+ - [OTOSimpleRawChat](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOSimpleRawChat): When you enter other user ID, you can 1:1 chatting in this App.
+<br> (Using only API among the Opentalkon components.)
 
 Reference
 ---------
