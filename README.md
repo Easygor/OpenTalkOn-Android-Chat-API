@@ -1,7 +1,7 @@
 OpenTalkOn-Android-Chat-API
 ===============================
 
-You can make chatting application for FREE using Opentalkon API.<br>
+You can make chatting application using Opentalkon API.<br>
 Immediately try in 5 minutes!
 
 <p align="center">
@@ -18,11 +18,7 @@ Description
 <br> (2)  1:1 chatting, Group chatting, Photo upload, Push notificaion
 <br> (3)  Change profile, Notificaion settings
 
- - [OTOSimpleChat](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOSimpleChat): When you enter other user ID, you can 1:1 chatting in this App.
-<br> (This App is used the chat rooms offered from the Opentalkon components.)
-
- - [OTOSimpleRawChat](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOSimpleRawChat): When you enter other user ID, you can 1:1 chatting in this App.
-<br> (Using only API among the Opentalkon components.)
+ - [OTOChatAppWithContent](https://github.com/OpenTalkOn/OpenTalkOn-Android-Chatting-API/tree/master/OTOChatAppWithContent): This app is example of how to merge with legacy code of your app and opentalkon framework.
 
 Reference
 ---------
@@ -41,7 +37,7 @@ Screenshot
 
 Screenshots of Basic App using Opentalkon API.
 <p align="center">
-  <img src="http://www.opentalkon.com/assets/images/main_screenshots.png"/>
+  <img src="http://www.opentalkon.com/assets/images/base_screenshots.png"/>
 </p>
 
 License
