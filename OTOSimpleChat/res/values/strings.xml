@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">OTOSimpleChat</string>
-    <string name="my_id">My ID</string>
-	<string name="insert_user_id">Insert ID of user to chat.</string>
-	<string name="chat">Chat!</string>
-</resources>

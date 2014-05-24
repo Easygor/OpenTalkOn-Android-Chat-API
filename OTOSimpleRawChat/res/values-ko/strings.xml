@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">OTOSimpleChat</string>
-    <string name="my_id">내아이디</string>
-	<string name="insert_user_id">대화할 유저의 아이디를 입력해주세요.</string>
-	<string name="chat">채팅!</string>
-</resources>
