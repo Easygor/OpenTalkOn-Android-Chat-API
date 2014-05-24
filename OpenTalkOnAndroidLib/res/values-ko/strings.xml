@@ -34,18 +34,27 @@
     <string name="oto_verify_number">인증번호</string>
     <string name="oto_phone_number">휴대전화번호</string>
     <string name="oto_insert_phone_number">본인 휴대전화번호를 입력해주세요.</string>
+    
     <string name="oto_yes">예</string>
     <string name="oto_no">아니요</string>
+    <string name="oto_follower">팔로워</string>
+    <string name="oto_following">팔로잉</string>
+    <string name="oto_find_user">유저 찾기</string>
+    <string name="oto_settings">설정</string>
+    <string name="oto_by_id">ID로 검색</string>
+    <string name="oto_by_nickname">닉네임으로 검색</string>
+    <string name="oto_input_id">ID를 입력해주세요.</string>
+    <string name="oto_input_nickname">닉네임을 입력해주세요.</string>
+    <string name="oto_only_number">숫자만 입력해주세요.</string>
     
     <string name="oto_verify_phone">핸드폰 번호 인증</string>
     <string name="oto_point">현재 포인트</string>
     
     <string name="oto_recent_talk">최신톡</string>
     <string name="oto_publictalk_exit_msg">대화방을 나가신 후에도 이 대화방의 메시지를 받으시겠습니까?</string>
-    
     <string name="oto_invite_management_1">초대 관리</string>
     <string name="oto_invite_management_2">채팅 초대 받지않음</string>
-    <string name="oto_invite_management_3">친구에게만 채팅 초대 받음</string>
+    <string name="oto_invite_management_3">팔로잉에게만 채팅 초대 받음</string>
     <string name="oto_cannot_kick_admin">운영자를 강제퇴장 시킬 수 없습니다.</string>
     <string name="oto_insert_room_name">방이름을 입력하세요.</string>
     
@@ -56,13 +65,12 @@
     <string name="oto_public_room_cannot_make_more">1인당 만들 수 있는 공개오픈톡방의 갯수를 초과 했습니다.</string>
     <string name="oto_public_opentalk">공개오픈톡</string>
     <string name="oto_room_name">방이름</string>
-    <string name="oto_private_room_label">개인 대화방</string>
+    <string name="oto_private_room_label">대화방</string>
     <string name="oto_public_room_label">참가중인 공개오픈톡</string>
     <string name="oto_room_is_hidden">이 대화방은 비공개 상태입니다.</string>
     <string name="oto_opentalkon_ad">실시간 대화방과 커뮤니티를 개발 없이 당신의 앱에 추가하세요!</string>
     
     <string name="oto_img_size_limit">10MB이상의 사진은 첨부하실수 없습니다.</string>
-    <string name="oto_input_id">닉네임을 입력해주세요.</string>
     <string name="oto_add_friend_alert">현재 사용하고 계신 앱의 사용자만 검색이 가능합니다.</string>
     <string name="oto_add_friend_alert2">해당 사용자가 없거나 검색이 허용되지 않은 사용자입니다.</string>
     
@@ -147,7 +155,7 @@
     <string name="oto_friend_popup_talk">1:1 대화 하기</string>
     <string name="oto_friend_popup_add_bookmark">즐겨찾기 추가</string>
     <string name="oto_friend_popup_del_bookmark">즐겨찾기 삭제</string>
-    <string name="oto_friend_popup_add_friend">친구 추가</string>
+    <string name="oto_friend_popup_add_friend">팔로잉 추가</string>
     <string name="oto_friend_popup_block">차단하기</string>
     <string name="oto_friend_popup_unblock">차단해제</string>
     <string name="oto_friend_popup_profile">프로필 설정</string>
@@ -169,7 +177,8 @@
     <string name="oto_friend_tab_4">더보기</string>
     
     <string name="oto_friend_label_1">즐겨찾기(%d)</string>
-    <string name="oto_friend_label_2">친구(%d)</string>
+    <string name="oto_friend_label_2">팔로잉(%d)</string>
+	<string name="oto_friend_label_3">팔로워(%d)</string>
     
     <string name="oto_invite_label_1">대화중인 사용자(%d)</string>
     <string name="oto_invite_label_2">친구 초대</string>
@@ -235,7 +244,7 @@
     
     <string name="oto_my_profile">내 프로필</string>
     <string name="oto_banned_friends">친구 관리</string>
-    <string name="oto_banned_friends_list">차단 친구 목록</string>
+    <string name="oto_banned_friends_list">차단 유저 목록</string>
     
     <string name="oto_opentalk_notification">오픈톡 알림 설정</string>
     <string name="oto_chat_notification">대화 알림 설정</string>

@@ -56,11 +56,6 @@ public class OTGallery extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ot_gallery_layout);
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		
 		Intent intent = getIntent();
 		selectedCount = intent.getIntExtra("selectedCount", 0);

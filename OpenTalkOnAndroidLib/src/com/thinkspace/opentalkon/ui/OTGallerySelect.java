@@ -64,13 +64,8 @@ public class OTGallerySelect extends ImageCacheActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ot_galleryselect_layout);
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		
-		title = (TextView) findViewById(R.id.oto_otgalleryselect_title);
+		title = (TextView) findViewById(R.id.oto_base_tab_title);
 		gridView = (GridView)findViewById(R.id.oto_otgalleryselect_gridview);
 		done = (Button)findViewById(R.id.oto_otgalleryselect_done);
 		

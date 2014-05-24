@@ -90,7 +90,9 @@ public class TASateliteDispatcher{
 					RegsiterData regData = new RegsiterData(rData);
 					retData.dataMap.put(location, regData);
 				}else if(TASatelite.GET_FRIENDS_URL.endsWith(location) ||
-					TASatelite.GET_USER_INFOS_URL.endsWith(location)){
+					TASatelite.GET_USER_INFOS_URL.endsWith(location) ||
+					TASatelite.GET_USER_INFO_BY_NICK_URL.endsWith(location) ||
+					TASatelite.GET_REVERSE_FRIENDS_URL.endsWith(location)){
 					JSONArray arrData = data.getJSONArray(DATA_KEY);
 					ArrayList<TAUserInfo> userInfo = new ArrayList<TAUserInfo>();
 					if(OTOApp.getInstance().getDB().beginTransaction()){
@@ -103,8 +105,7 @@ public class TASateliteDispatcher{
 					}
 					retData.dataMap.put(location, userInfo);
 				}else if(TASatelite.GET_USER_INFO_URL.endsWith(location) ||
-						TASatelite.SET_USER_INFO_URL.endsWith(location) ||
-						TASatelite.GET_USER_INFO_BY_NICK_URL.endsWith(location)){
+						TASatelite.SET_USER_INFO_URL.endsWith(location)){
 					JSONObject rData = data.getJSONObject(DATA_KEY);
 					OTOApp.getInstance().getDB().beginTransaction();
 					retData.dataMap.put(location, dispatchUserInfo(rData, true));

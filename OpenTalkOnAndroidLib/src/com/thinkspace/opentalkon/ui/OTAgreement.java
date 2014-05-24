@@ -43,11 +43,6 @@ public class OTAgreement extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ot_agreement);
 		
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		findViewById(R.id.oto_agreement_confirm).setOnClickListener(new OnClickListener() {
 			@Override public void onClick(View arg0) {
 				finish();

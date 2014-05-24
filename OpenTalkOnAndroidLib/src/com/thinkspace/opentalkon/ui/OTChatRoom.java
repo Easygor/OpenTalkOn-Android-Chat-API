@@ -92,15 +92,6 @@ public class OTChatRoom extends OTRoomBase {
 		super.onCreate(savedInstanceState);
 		if(finishGuard)return;
 		
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				if(OTOApp.getInstance().isHasFriendActivity() == false){
-					Intent acintent = new Intent(OTChatRoom.this, OTMain.class);
-					startActivity(acintent);
-				}
-				finish();
-			}
-		});
 		toLayout();
 		OTOApp.getInstance().getCacheCtrl().getUnReadMsg(null, null, true);
 		

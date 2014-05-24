@@ -374,7 +374,7 @@ public abstract class OTRoomBase extends OTImageLoadBase implements TADataHandle
 			return;
 		}else{
 			super.onBackPressed();
-			if(OTOApp.getInstance().isHasFriendActivity() == false){
+			if(OTOApp.getInstance().getMainActivityCount() == 0){
 				Intent acintent = new Intent(this, OTMain.class);
 				startActivity(acintent);
 			}

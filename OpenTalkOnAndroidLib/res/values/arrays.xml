@@ -28,6 +28,6 @@
 	</string-array>
 	
 	<string-array name="oto_user_list_method">
-	    <item>Delete this friend</item>
+	    <item>Delete this Following</item>
 	</string-array>
 </resources>

@@ -34,8 +34,18 @@
     <string name="oto_verify_number">Verify Number</string>
     <string name="oto_phone_number">Phone Number</string>
     <string name="oto_insert_phone_number">Insert your Phone Number</string>
+    
 	<string name="oto_yes">Yes</string>
     <string name="oto_no">No</string>
+    <string name="oto_follower">Follower</string>
+    <string name="oto_following">Following</string>
+    <string name="oto_find_user">Find User</string>
+    <string name="oto_settings">Settings</string>
+    <string name="oto_by_id">By ID</string>
+    <string name="oto_by_nickname">By Nickname</string>
+    <string name="oto_input_id">Search by ID.</string>
+    <string name="oto_input_nickname">Search by NickName.</string>
+    <string name="oto_only_number">Please input number only.</string>
     
     <string name="oto_verify_phone">Verify PhoneNumber</string>
     <string name="oto_point">Recent Point</string>
@@ -44,7 +54,7 @@
     <string name="oto_publictalk_exit_msg">Even after you have left the chat room, you want to receive messages of this chat room?</string>
     <string name="oto_invite_management_1">Chatting Invitation</string>
     <string name="oto_invite_management_2">Prohibit all invitation</string>
-    <string name="oto_invite_management_3">Invitation from friends only</string>
+    <string name="oto_invite_management_3">Invitation from followings only</string>
     <string name="oto_cannot_kick_admin">You cannot kick administrator.</string>
     <string name="oto_insert_room_name">Insert a room name.</string>
     
@@ -55,13 +65,12 @@
     <string name="oto_public_room_cannot_make_more">You have exceeded the number of public opentalks that can make one person.</string>
     <string name="oto_public_opentalk">PublicTalk</string>
     <string name="oto_room_name">Room Name</string>
-    <string name="oto_private_room_label">Private ChatRoom</string>
+    <string name="oto_private_room_label">ChatRoom</string>
     <string name="oto_public_room_label">Public OpenTalkRoom</string>
     <string name="oto_room_is_hidden">This room has set hidden.</string>
-    
     <string name="oto_opentalkon_ad">Add a Live Chat Feature on your App, without any development</string>
+    
     <string name="oto_img_size_limit">You cannot attach pictures over 10MB.</string>
-    <string name="oto_input_id">Search by NickName.</string>
     <string name="oto_add_friend_alert">You can only search users who are currently using this app.</string>
     <string name="oto_add_friend_alert2">There is no such user or the user cannot be searched.</string>
     
@@ -146,7 +155,7 @@
     <string name="oto_friend_popup_talk">1:1 Chat</string>
     <string name="oto_friend_popup_add_bookmark">Add to Favorites</string>
     <string name="oto_friend_popup_del_bookmark">Delete from Favorites</string>
-    <string name="oto_friend_popup_add_friend">Add Friend</string>
+    <string name="oto_friend_popup_add_friend">Add Following</string>
     <string name="oto_friend_popup_block">Block</string>
     <string name="oto_friend_popup_unblock">Unblock</string>
     <string name="oto_friend_popup_profile">Profile Setting</string>
@@ -168,7 +177,8 @@
     <string name="oto_friend_tab_4">See more</string>
     
     <string name="oto_friend_label_1">Favorites(%d)</string>
-    <string name="oto_friend_label_2">Friends(%d)</string>
+    <string name="oto_friend_label_2">Following(%d)</string>
+    <string name="oto_friend_label_3">Follower(%d)</string>
     
     <string name="oto_invite_label_1">Users in chatroom(%d)</string>
     <string name="oto_invite_label_2">Invite friend</string>
@@ -234,7 +244,7 @@
     
     <string name="oto_my_profile">My profile</string>
     <string name="oto_banned_friends">Manage friends</string>
-    <string name="oto_banned_friends_list">Blocked friend list</string>
+    <string name="oto_banned_friends_list">Blocked user list</string>
     
     <string name="oto_opentalk_notification">OpenTalk alert setting</string>
     <string name="oto_chat_notification">Chat alert setting</string>

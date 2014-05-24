@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OTOChatAppWithContent</string>
+    <string name="content">아주 쉽게 채팅기능이 있는 앱을 이렇게 만들 수 있습니다.\n(소스코드를 확인해주세요)</string>
+</resources>

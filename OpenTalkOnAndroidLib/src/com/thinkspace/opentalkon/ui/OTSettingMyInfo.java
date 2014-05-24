@@ -85,23 +85,12 @@ public class OTSettingMyInfo extends OTImageLoadBase implements TADataHandler, I
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ot_setting_myinfo);
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		satelite = new TASatelite(this);
 		Intent intent = getIntent();
 		if(intent != null){
 			is_my_info = intent.getBooleanExtra("is_my_info", false);
 			user_info = intent.getParcelableExtra("user_info");
 		}else is_my_info = false;
-		
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		termsOfUse = findViewById(R.id.oto_oto_setting_terms_of_use);
 		nickName = (EditText) findViewById(R.id.oto_myprofile_nickname);
 		introduce =(EditText)findViewById(R.id.oto_myprofile_introduce);

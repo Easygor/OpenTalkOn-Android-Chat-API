@@ -188,12 +188,6 @@ public abstract class OTTableActivityBase extends ImageCacheActivity implements 
 				ab.show();
 			}
 		});
-		
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				onBackPressed();
-			}
-		});
 		satelite = new TASatelite(this);
 	}
 	

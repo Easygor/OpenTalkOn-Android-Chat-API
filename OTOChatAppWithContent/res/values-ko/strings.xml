@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OTOChatAppWithContent</string>
+    <string name="content">Place content of your app here. you can easily add chat feature like this.(See source code for detail)</string>
+</resources>

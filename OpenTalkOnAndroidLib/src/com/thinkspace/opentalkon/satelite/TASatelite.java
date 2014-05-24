@@ -21,6 +21,7 @@ public class TASatelite extends PLHttpSatelite implements PLHttpDataHandler{
 	
 	public static String BASE_URL;
 	public static String GET_FRIENDS_URL;
+	public static String GET_REVERSE_FRIENDS_URL;
 	public static String GET_SENDED_MSG_STATE_URL;
 	public static String GET_USER_INFO_URL;
 	public static String GET_USER_INFO_BY_NICK_URL;
@@ -54,6 +55,7 @@ public class TASatelite extends PLHttpSatelite implements PLHttpDataHandler{
 	public static void setupSateliteHost(String BASE_URL){
 		TASatelite.BASE_URL = BASE_URL;
 		TASatelite.GET_FRIENDS_URL = BASE_URL + "getfriends";
+		TASatelite.GET_REVERSE_FRIENDS_URL = BASE_URL + "getreversefriends";
 		TASatelite.GET_SENDED_MSG_STATE_URL = BASE_URL + "getsendedmsgstate";
 		TASatelite.GET_USER_INFO_URL = BASE_URL + "getuserinfo";
 		TASatelite.GET_USER_INFO_BY_NICK_URL = BASE_URL + "getuserinfobynick";
@@ -400,6 +402,17 @@ public class TASatelite extends PLHttpSatelite implements PLHttpDataHandler{
 	
 	public void doGetFriends(String token){
 		setAddr(GET_FRIENDS_URL);
+		JSONObject data = new JSONObject();
+		try {
+			data.put("token", token);
+			sendData(data.toString());
+		}catch(JSONException ex){
+			ex.printStackTrace();
+		}
+	}
+	
+	public void doGetReverseFriends(String token){
+		setAddr(GET_REVERSE_FRIENDS_URL);
 		JSONObject data = new JSONObject();
 		try {
 			data.put("token", token);

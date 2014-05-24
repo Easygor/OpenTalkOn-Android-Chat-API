@@ -48,11 +48,6 @@ public class OTSettingBlockUser extends ImageCacheActivity implements UserElemCl
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ot_invite_chat_layout);
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		listView = (ListView) findViewById(R.id.oto_make_chat_list_list);
 		cancel = findViewById(R.id.oto_make_chat_cancel_btn);
 		empty = findViewById(R.id.oto_ignore_list_empty);

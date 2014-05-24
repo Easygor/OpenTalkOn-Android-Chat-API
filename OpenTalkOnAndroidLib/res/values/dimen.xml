@@ -8,5 +8,13 @@
     <dimen name="ot_more_app_bottom_body_size">12dp</dimen>
     <dimen name="ot_text_msg_maxwidth">160dp</dimen>
     
-        <dimen name="com_opentalkon_facebook_picker_divider_width">2px</dimen>
+    <dimen name="slidingmenu_offset">260dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+
+    <integer name="num_cols">1</integer>
+    
+    <dimen name="pretty_text_size">15sp</dimen>
+    <color name="pretty_text_main_color">#FFFFFF</color>
+    <color name="pretty_text_shadow_color">#80000000</color>
 </resources>

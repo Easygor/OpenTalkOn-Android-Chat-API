@@ -10,7 +10,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		ClientInterface.startOpenTalkOnMain(this, true);
+		ClientInterface.startOpenTalkOnMain(this, false);
 		finish();
 	}
 }

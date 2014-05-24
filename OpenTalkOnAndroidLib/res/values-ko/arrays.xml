@@ -28,6 +28,6 @@
 	</string-array>
 	
 	<string-array name="oto_user_list_method">
-	    <item>친구삭제</item>
+	    <item>팔로잉 삭제</item>
 	</string-array>
 </resources>

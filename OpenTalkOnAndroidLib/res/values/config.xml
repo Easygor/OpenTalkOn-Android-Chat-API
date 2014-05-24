@@ -8,7 +8,7 @@
     <string name="oto_android_service_host">http://192.168.0.2:9000/</string>
     <string name="oto_android_service_host">https://android-kr.opentalkon.com:9090/</string>
      -->
-    <integer name="oto_no_terms_of_use">0</integer>
+    <integer name="oto_no_terms_of_use">1</integer>
     
     <string name="oto_broker_appclient_port">8883</string>
     <string name="oto_broker_service_restart_interval">600000</string>

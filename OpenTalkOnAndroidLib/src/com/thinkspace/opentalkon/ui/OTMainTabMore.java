@@ -42,8 +42,7 @@ public class OTMainTabMore extends PLActivityGroupView implements TADataHandler 
 	ImageView inviteOption2ImgView;
 	
 	View versionView;
-	View moreAppView;
-	
+
 	TextView nickNameView;
 	TextView introduceView;
 	
@@ -122,14 +121,6 @@ public class OTMainTabMore extends PLActivityGroupView implements TADataHandler 
 			@Override public void onClick(View v) {
 				Intent intent = new Intent(OTMainTabMore.this, OTVersion.class);
 				OTMainTabMore.this.startActivity(intent);
-			}
-		});
-		
-		moreAppView = findViewById(R.id.oto_myinfo_more_app);
-		moreAppView.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View arg0) {
-				startActivity(new Intent(OTMainTabMore.this, OTMoreApp.class));
 			}
 		});
 		

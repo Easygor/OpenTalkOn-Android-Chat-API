@@ -1,17 +1,217 @@
 package com.thinkspace.opentalkon.lib;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.json.JSONObject;
+
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.nostra13.universalimageloader.core.imageaware.ImageViewAware;
 import com.thinkspace.opentalkon.OTOApp;
+import com.thinkspace.opentalkon.R;
+import com.thinkspace.opentalkon.data.OTMsgBase;
+import com.thinkspace.opentalkon.data.TAMultiData;
+import com.thinkspace.opentalkon.data.TAUserInfo;
+import com.thinkspace.opentalkon.satelite.TADataHandler;
+import com.thinkspace.opentalkon.satelite.TAImageDataHandler;
 import com.thinkspace.opentalkon.satelite.TASatelite;
+import com.thinkspace.opentalkon.satelite.TASateliteDispatcher;
+import com.thinkspace.opentalkon.satelite.TASateliteDispatcher.DispatchedData;
 import com.thinkspace.opentalkon.ui.OTChatRoom;
+import com.thinkspace.opentalkon.ui.OTFriendListBase;
+import com.thinkspace.opentalkon.ui.OTFriendPopup;
 import com.thinkspace.opentalkon.ui.OTMain;
+import com.thinkspace.opentalkon.ui.helper.PrettyTextView;
+import com.thinkspace.opentalkon.ui.helper.RoundedBitmapDisplayer;
+import com.thinkspace.pushservice.satelite.PLMsgHandler;
 
 public class ClientInterface {
+	public static Map<Activity, PLMsgHandler> msgHandlers = new HashMap<Activity, PLMsgHandler>();
+	public static Map<Activity, SlidingMenu> menus = new HashMap<Activity, SlidingMenu>();
+	
+	private static void setMsgCount(int count, TextView msgCount){
+		if(msgCount == null) return;
+		if(count == 0){
+			msgCount.setVisibility(View.GONE);
+		}else{
+			msgCount.setVisibility(View.VISIBLE);
+			msgCount.setText(String.valueOf(count));
+		}
+	}
+	
+	private static class SlidingMenuListener implements OnClickListener{
+		Activity activity;
+		SlidingMenu menu;
+		public SlidingMenuListener(Activity activity, SlidingMenu menu) {
+			this.activity = activity;
+			this.menu = menu;
+		}
+
+		@Override
+		public void onClick(View v) {
+			if(v.getId() == R.id.oto_menu_select_0){
+				Intent intent = new Intent(activity,OTFriendPopup.class);
+				intent.putExtra("user_id", OTOApp.getInstance().getId());
+				activity.startActivityForResult(intent, OTFriendListBase.OT_CHECK_IF_RESUME);
+				return;
+			}
+			
+			Intent intent = new Intent(activity, OTMain.class);
+			intent.putExtra("doInit", true);
+			if(v.getId() == R.id.oto_menu_select_1){
+				intent.putExtra("state", 1);
+			}else if(v.getId() == R.id.oto_menu_select_2){
+				intent.putExtra("state", 2);
+			}else if(v.getId() == R.id.oto_menu_select_3){
+				intent.putExtra("state", 3);
+			}else if(v.getId() == R.id.oto_menu_select_4){
+				intent.putExtra("state", 4);
+			}else if(v.getId() == R.id.oto_menu_select_5){
+				intent.putExtra("state", 5);
+			}
+			activity.startActivity(intent);
+			menu.toggle(false);
+		}
+	}
+	
+	public static void onDestroySlidingMenu(final Activity activity){
+		if(msgHandlers.containsKey(activity)){
+			OTOApp.getInstance().getPushClient().unRegisterMsgHandler(msgHandlers.get(activity));
+		}
+	}
+	
+	public static void onResumeSlidingMenu(final Activity activity){
+		
+		if(OTOApp.getInstance().getId() == -1L){
+			IntentFilter iff = new IntentFilter(OTOApp.ACTION_GET_VALID_TOKEN_IS_DONE);
+			activity.registerReceiver(new BroadcastReceiver() {
+				@Override
+				public void onReceive(Context context, Intent intent) {
+					activity.unregisterReceiver(this);
+					onResumeSlidingMenu(activity);
+				}
+			}, iff);
+			return;
+		}
+		
+        final ImageView image = (ImageView) activity.findViewById(R.id.oto_menu_image);
+        final TextView name = (TextView) activity.findViewById(R.id.oto_menu_name);
+        final PrettyTextView followerCnt = (PrettyTextView) activity.findViewById(R.id.oto_menu_follower);
+        final PrettyTextView followingCnt = (PrettyTextView) activity.findViewById(R.id.oto_menu_following);
+        final RoundedBitmapDisplayer roundDisplayer = new RoundedBitmapDisplayer(10);
+        final TextView msgCount = (TextView) activity.findViewById(R.id.oto_menu_select_1_count);
+        
+        setMsgCount(OTOApp.getInstance().getCacheCtrl().getAllUnReadMsg(), msgCount);
+        
+        new TASatelite(new TADataHandler() {
+			@Override public void onTokenIsNotValid(JSONObject data) {}
+			@Override public void onLimitMaxUser(JSONObject data) {}
+			@Override
+			public void onHttpPacketReceived(JSONObject data) {
+				try{					
+				DispatchedData dData = TASateliteDispatcher.dispatchSateliteData(data);
+				JSONObject realData = data.getJSONObject("data");
+				if(dData.isOK()){
+					if(TASatelite.GET_USER_INFO_URL.endsWith(dData.getLocation())){
+						TAUserInfo userInfo = (TAUserInfo) dData.getData();
+						int follower = realData.getInt("follower");
+						int following = realData.getInt("following");
+						followerCnt.setText(String.valueOf(follower));
+						followingCnt.setText(String.valueOf(following));
+						name.setText(userInfo.getNickName());
+						if(userInfo.getImagePath().length() != 0){
+							String img_path = TASatelite.makeImageUrl(userInfo.getImagePath());
+							image.setImageResource(R.drawable.oto_friend_img_01);
+							OTOApp.getInstance().getImageDownloader().requestImgDownload(img_path, new TAImageDataHandler() {
+								@Override public void onHttpImagePacketReceived(String url, Bitmap bitmap) {
+									roundDisplayer.display(bitmap, new ImageViewAware(image), null);
+								}
+								@Override public void onHttpImageException(Exception ex) {
+									image.setImageResource(R.drawable.oto_friend_img_01);
+								}
+							});
+						}else{
+							image.setImageResource(R.drawable.oto_friend_img_01);
+						}
+					}
+				}
+				}catch(Exception ex){
+					ex.printStackTrace();
+				}
+			}
+			@Override public void onHttpException(Exception ex, TAMultiData data, String addr) {}
+			@Override public void onHttpException(Exception ex, JSONObject data, String addr) {}
+		}).doGetUserInfo(OTOApp.getInstance().getToken(), OTOApp.getInstance().getId());
+	}
+	
+	public static void showSlidingMenu(final Activity activity){
+		if(menus.containsKey(activity)){
+			menus.get(activity).toggle(true);
+		}
+	}
+	
+	public static void onCreateSlidingMenu(final Activity activity){
+		final SlidingMenu menu = new SlidingMenu(activity);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setBehindWidthRes(R.dimen.slidingmenu_offset);
+        menu.attachToActivity(activity, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.ex_main_menu_layout);
+        menu.setShadowWidth(5);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setFadeEnabled(false);
+		
+        activity.findViewById(R.id.oto_menu_following_layout).setOnClickListener(new OnClickListener() {
+			@Override public void onClick(View v) {
+				activity.findViewById(R.id.oto_menu_select_2).performClick();
+			}
+		});
+        activity.findViewById(R.id.oto_menu_follower_layout).setOnClickListener(new OnClickListener() {
+			@Override public void onClick(View v) {
+				activity.findViewById(R.id.oto_menu_select_3).performClick();
+			}
+		});
+        activity.findViewById(R.id.oto_menu_user_layout).setOnClickListener(new OnClickListener() {
+			@Override public void onClick(View v) {
+				Intent intent = new Intent(activity,OTFriendPopup.class);
+				intent.putExtra("user_id", OTOApp.getInstance().getId());
+				activity.startActivityForResult(intent, OTFriendListBase.OT_CHECK_IF_RESUME);
+			}
+		});
+        
+        SlidingMenuListener listener = new SlidingMenuListener(activity, menu);
+        activity.findViewById(R.id.oto_menu_select_0).setOnClickListener(listener);
+        activity.findViewById(R.id.oto_menu_select_1).setOnClickListener(listener);
+        activity.findViewById(R.id.oto_menu_select_2).setOnClickListener(listener);
+        activity.findViewById(R.id.oto_menu_select_3).setOnClickListener(listener);
+        activity.findViewById(R.id.oto_menu_select_4).setOnClickListener(listener);
+        activity.findViewById(R.id.oto_menu_select_5).setOnClickListener(listener);
+        
+        onResumeSlidingMenu(activity);
+        
+        final TextView msgCount = (TextView) activity.findViewById(R.id.oto_menu_select_1_count);
+        menus.put(activity, menu);
+        msgHandlers.put(activity, new PLMsgHandler() {
+			@Override public void onMsgReceived(OTMsgBase msg) {
+				setMsgCount(OTOApp.getInstance().getCacheCtrl().getAllUnReadMsg(), msgCount);
+			}
+		});
+		
+        OTOApp.getInstance().getPushClient().registerMsgHandler(msgHandlers.get(activity));
+	}
+	
 	/**
 	 * @breif Changes icon and App name to be set on Notification. \n
 	 * 			  Notification is shown when message arrives, someone 'Likes' my post or when a comment is written on post. \n

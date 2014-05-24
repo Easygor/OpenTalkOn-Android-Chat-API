@@ -20,6 +20,7 @@ import com.thinkspace.clientpackets.protobuf.ClientPackets.RoomInfo;
 import com.thinkspace.clientpackets.protobuf.ClientPackets.RoomUser;
 import com.thinkspace.clientpackets.protobuf.ClientPackets.SendMessage;
 import com.thinkspace.opentalkon.OTOApp;
+import com.thinkspace.opentalkon.R;
 import com.thinkspace.opentalkon.data.OTTalkMsgV2;
 import com.thinkspace.opentalkon.data.TARoomInfo;
 import com.thinkspace.opentalkon.data.TAUserNick;
@@ -416,7 +417,19 @@ public abstract class PushClientBase implements pushClientHandler{
 		boolean res = OTOApp.getInstance().getCacheCtrl().addMsg(msg);
 		
 		if(notify && res){
-			OTOApp.getInstance().getConvMgr().newMsgNotification(msg.getRoom_id(), msg.getSender_id(), msg.getMsg());
+			String notiMsg = "";
+			if(msg.getMsg().length() == 0){
+				if(msg.isImgMsg()){
+					notiMsg = ctx.getString(R.string.oto_picture);
+				}else if(msg.isInviteMsg()){
+					notiMsg = ctx.getString(R.string.oto_context_menu_4);
+				}else if(msg.isExitMsg()){
+					notiMsg = ctx.getString(R.string.oto_exit_room);
+				}
+			}else{
+				notiMsg = msg.getMsg();
+			}
+			OTOApp.getInstance().getConvMgr().newMsgNotification(msg.getRoom_id(), msg.getSender_id(), notiMsg);
 		}
 		if(res){
 			handler.post(new Runnable() {

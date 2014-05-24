@@ -58,7 +58,6 @@ public class OTMainTabChatList extends PLActivityGroupView implements PLMsgHandl
 	
 	EditText searchEdit;
 	View searchEditDelete;
-	View subTabMoreButton;
 	
 	ArrayList<RoomElem> rooms = new ArrayList<RoomElem>();
 	ArrayList<RoomElem> rooms_original = new ArrayList<RoomElem>();
@@ -184,13 +183,6 @@ public class OTMainTabChatList extends PLActivityGroupView implements PLMsgHandl
 	protected void setSearchLayout(){
 		searchEdit = (EditText)findViewById(R.id.oto_subtab_search_edit);
 		searchEditDelete = (ImageView)findViewById(R.id.oto_subtab_search_edit_delete);
-		subTabMoreButton = findViewById(R.id.oto_subtab_more_button);
-		
-		subTabMoreButton.setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				startActivity(new Intent(OTMainTabChatList.this, OTMoreApp.class));
-			}
-		});
 		
 		searchEdit.addTextChangedListener(new TextWatcher() {
 			@Override public void onTextChanged(CharSequence s, int start, int before,int count) {}

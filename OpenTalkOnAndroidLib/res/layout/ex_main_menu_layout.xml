@@ -1,0 +1,230 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pretty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/oto_menu_background_sidemenu">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="100dp"
+		        android:orientation="horizontal"
+		        android:id="@+id/oto_menu_user_layout"
+		        android:background="@drawable/oto_menu_background_profile">
+		        <ImageView android:layout_width="70dp"
+		            android:layout_height="70dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:id="@+id/oto_menu_image"
+		            android:layout_gravity="center_vertical"
+		            android:src="@drawable/oto_friend_img_01"/>
+		        <LinearLayout android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:layout_marginRight="10dp"
+		            android:orientation="vertical"
+		            android:gravity="center_vertical">
+		            <FrameLayout android:layout_width="match_parent"
+		                android:layout_height="30dp"
+		                android:orientation="horizontal">
+		                <TextView android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_gravity="center_vertical|left"
+					        android:id="@+id/oto_menu_name"
+							android:text=""
+					        android:textSize="15sp"
+					        android:textStyle="bold"
+					        android:textColor="#FF0000"/>
+		            </FrameLayout>
+		            <LinearLayout android:layout_width="match_parent"
+		                android:layout_height="50dp"
+		                android:layout_marginTop="1dp"
+		                android:orientation="horizontal">
+		                <LinearLayout android:layout_width="match_parent"
+		                    android:layout_height="match_parent"
+		                    android:id="@+id/oto_menu_following_layout"
+		                    android:orientation="vertical"
+		                    android:gravity="center"
+		                    android:layout_weight="1.0">
+							<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:id="@+id/oto_menu_following"
+					            pretty:text=""
+					            pretty:mainTextColor="#000000"
+								pretty:shadowTextColor="#20000000"
+					            pretty:textSize="17sp"/>
+							<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            pretty:text="Following"
+					            pretty:mainTextColor="#000000"
+								pretty:shadowTextColor="#20000000"
+					            pretty:textSize="12sp"/>
+		                </LinearLayout>
+		                <LinearLayout android:layout_width="match_parent"
+		                    android:layout_height="match_parent"
+		                    android:id="@+id/oto_menu_follower_layout"
+		                    android:orientation="vertical"
+		                    android:gravity="center"
+		                    android:layout_weight="1.0">
+							<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:id="@+id/oto_menu_follower"
+					            pretty:text=""
+					            pretty:mainTextColor="#000000"
+								pretty:shadowTextColor="#20000000"
+					            pretty:textSize="17sp"/>
+							<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            pretty:text="Follower"
+					            pretty:mainTextColor="#000000"
+								pretty:shadowTextColor="#20000000"
+					            pretty:textSize="12sp"/>
+		                </LinearLayout>
+		            </LinearLayout>
+		        </LinearLayout>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:id="@+id/oto_menu_select_0"
+		        android:orientation="horizontal"
+		        android:background="@drawable/sh_menu_selector"
+		        android:gravity="center_vertical">
+		        <ImageView android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:src="@drawable/oto_ex_profile"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginLeft="15dp"/>
+				<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            pretty:text="@string/oto_my_profile"
+		            pretty:mainTextColor="#000000"
+					pretty:shadowTextColor="#30000000"
+		            pretty:textSize="13sp"/>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:id="@+id/oto_menu_select_1"
+		        android:orientation="horizontal"
+		        android:background="@drawable/sh_menu_selector"
+		        android:gravity="center_vertical">
+		        <ImageView android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:src="@drawable/oto_ex_chat_list"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginLeft="15dp"/>
+				<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            pretty:text="@string/oto_friend_tab_3"
+		            pretty:mainTextColor="#000000"
+					pretty:shadowTextColor="#30000000"
+		            pretty:textSize="13sp"/>
+		        <FrameLayout android:layout_width="match_parent"
+		            android:layout_height="match_parent">
+		            <TextView android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:paddingTop="1dp"
+		                android:paddingBottom="1dp"
+		                android:paddingLeft="2dp"
+		                android:paddingRight="2dp"
+		                android:id="@+id/oto_menu_select_1_count"
+		                android:gravity="center"
+		                android:textColor="#FFFFFF"
+		                android:textSize="15sp"
+		                android:layout_gravity="right|center_vertical"
+		                android:layout_marginRight="20dp"
+		                android:background="@drawable/sh_new_number_background"/>
+		        </FrameLayout>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:id="@+id/oto_menu_select_2"
+		        android:orientation="horizontal"
+		        android:background="@drawable/sh_menu_selector"
+		        android:gravity="center_vertical">
+		        <ImageView android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:src="@drawable/oto_conv_out"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginLeft="15dp"/>
+				<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            pretty:text="@string/oto_following"
+		            pretty:mainTextColor="#000000"
+					pretty:shadowTextColor="#30000000"
+		            pretty:textSize="13sp"/>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:id="@+id/oto_menu_select_3"
+		        android:orientation="horizontal"
+		        android:background="@drawable/sh_menu_selector"
+		        android:gravity="center_vertical">
+		        <ImageView android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:src="@drawable/oto_conv_invite"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginLeft="15dp"/>
+				<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            pretty:text="@string/oto_follower"
+		            pretty:mainTextColor="#000000"
+					pretty:shadowTextColor="#30000000"
+		            pretty:textSize="13sp"/>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:id="@+id/oto_menu_select_4"
+		        android:orientation="horizontal"
+		        android:background="@drawable/sh_menu_selector"
+		        android:gravity="center_vertical">
+		        <ImageView android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:src="@drawable/oto_ex_find_user"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginLeft="15dp"/>
+				<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            pretty:text="@string/oto_find_user"
+		            pretty:mainTextColor="#000000"
+					pretty:shadowTextColor="#30000000"
+		            pretty:textSize="13sp"/>
+		    </LinearLayout>
+		    <LinearLayout android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:id="@+id/oto_menu_select_5"
+		        android:orientation="horizontal"
+		        android:background="@drawable/sh_menu_selector"
+		        android:gravity="center_vertical">
+		        <ImageView android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:src="@drawable/oto_ex_setting"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginLeft="15dp"/>
+				<com.thinkspace.opentalkon.ui.helper.PrettyTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            pretty:text="@string/oto_settings"
+		            pretty:mainTextColor="#000000"
+					pretty:shadowTextColor="#30000000"
+		            pretty:textSize="13sp"/>
+		    </LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

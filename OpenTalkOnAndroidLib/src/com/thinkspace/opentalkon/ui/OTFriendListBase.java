@@ -39,7 +39,7 @@ import com.thinkspace.opentalkon.satelite.TASateliteDispatcher.DispatchedData;
 import com.thinkspace.opentalkon.ui.helper.PLActivityGroupView;
 
 public abstract class OTFriendListBase extends PLActivityGroupView implements TADataHandler, UserElemClickListener {
-	
+	public final static int OT_CHECK_IF_RESUME = 100;
 	TASatelite satelite;
 	ListView listView;
 	TextView emptyView;
@@ -53,10 +53,8 @@ public abstract class OTFriendListBase extends PLActivityGroupView implements TA
 	ViewGroup searchLayout;
 	EditText searchEdit;
 	View searchEditDelete;
-	View subTabMoreButton;
 	
 	SearchHandler searchHandler;
-	View addFriendBtn;
 	
 	public static interface SearchHandler{
 		public void onSearch(String value);
@@ -70,18 +68,10 @@ public abstract class OTFriendListBase extends PLActivityGroupView implements TA
 		listView = (ListView) findViewById(R.id.oto_friend_list_list);
 		emptyView = (TextView) findViewById(R.id.oto_friend_list_empty);
 		progView =  (ViewGroup) findViewById(R.id.oto_friend_list_prog);
-		addFriendBtn = findViewById(R.id.oto_subtab_add_friend_button);
 		
 		searchLayout = (ViewGroup)findViewById(R.id.oto_subtab_list_search);
 		searchLayout.setVisibility(View.GONE);
 		emptyView.setText(getEmptylistString());
-		
-		addFriendBtn.setOnClickListener(new OnClickListener() {	
-			@Override
-			public void onClick(View v) {
-				getParent().startActivity(new Intent(OTFriendListBase.this, OTAddFriend.class));
-			}
-		});
 		
 		satelite = new TASatelite(this);
 		setProg(true);
@@ -94,13 +84,6 @@ public abstract class OTFriendListBase extends PLActivityGroupView implements TA
 		
 		searchEdit = (EditText)findViewById(R.id.oto_subtab_search_edit);
 		searchEditDelete = (ImageView)findViewById(R.id.oto_subtab_search_edit_delete);
-		subTabMoreButton = findViewById(R.id.oto_subtab_more_button);
-		
-		subTabMoreButton.setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				startActivity(new Intent(OTFriendListBase.this, OTMoreApp.class));
-			}
-		});
 		
 		searchEdit.addTextChangedListener(new TextWatcher() {
 			@Override public void onTextChanged(CharSequence s, int start, int before,int count) {}
@@ -217,7 +200,8 @@ public abstract class OTFriendListBase extends PLActivityGroupView implements TA
 		enum LabelType{
 			TYPE_MYPROFILE,
 			TYPE_BEST_FRIEND,
-			TYPE_FRIEND
+			TYPE_FRIEND,
+			TYPE_REVERSE_FRIEND
 		}
 		boolean isDivider;
 		LabelType friendLabelType;
@@ -242,8 +226,12 @@ public abstract class OTFriendListBase extends PLActivityGroupView implements TA
 				point = 3;
 			}else if(elem.isDivider && elem.friendLabelType == LabelType.TYPE_FRIEND){
 				point = 4;
-			}else{
+			}else if(elem.info != null && elem.info.is_friend()){
 				point = 5;
+			}else if(elem.isDivider && elem.friendLabelType == LabelType.TYPE_REVERSE_FRIEND){
+				point = 6;
+			}else{
+				point = 7;
 			}
 			return point;
 		}
@@ -255,7 +243,8 @@ public abstract class OTFriendListBase extends PLActivityGroupView implements TA
 			if(leftSortPoint != rightSortPoint){
 				return leftSortPoint < rightSortPoint?-1:1;
 			}else{
-				if(leftSortPoint == 3 || leftSortPoint == 5){
+				int point = leftSortPoint;
+				if(point == 3 || point == 5 || point == 7){
 					return lhs.info.compareTo(rhs.info);
 				}else{
 					return -1;

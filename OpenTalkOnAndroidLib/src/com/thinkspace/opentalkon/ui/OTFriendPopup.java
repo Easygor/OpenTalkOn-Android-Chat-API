@@ -346,7 +346,9 @@ public class OTFriendPopup extends Activity implements TADataHandler{
 		fullImageView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, size.x - 80));
 		
 		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
+			
+			@Override
+			public void onClick(View v) {
 				finish();
 			}
 		});

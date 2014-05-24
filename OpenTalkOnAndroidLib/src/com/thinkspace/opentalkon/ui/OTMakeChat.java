@@ -58,11 +58,6 @@ public class OTMakeChat extends OTImageLoadBase implements UserElemClickListener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ot_invite_chat_layout);
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		
 		listView = (ListView) findViewById(R.id.oto_make_chat_list_list);
 		emptyView = (TextView) findViewById(R.id.oto_make_chat_list_empty);
@@ -73,12 +68,6 @@ public class OTMakeChat extends OTImageLoadBase implements UserElemClickListener
 		listDataSet = new ArrayList<CheckFriendListElem>();
 		adapter = new ListAdapter(this, R.layout.ot_elem_friend, listDataSet);
 		listView.setAdapter(adapter);
-
-		findViewById(R.id.oto_main_cancel_button).setOnClickListener(new OnClickListener() {
-			@Override public void onClick(View arg0) {
-				finish();
-			}
-		});
 		
 		Intent intent = getIntent();
 		if(intent == null){

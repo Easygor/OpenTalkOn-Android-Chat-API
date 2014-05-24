@@ -58,7 +58,7 @@ public class OTOApp {
 	}
 
 	PushClientBase client;
-	boolean hasFriendActivity;
+	int mainActivityCount = 0;
 	boolean mainFullScreen = false;
 	GetValidTokenDoneReceiver getValidTokenDoneReceiver = null;
 	boolean phoneVerify = false;
@@ -71,13 +71,19 @@ public class OTOApp {
 	}
 	
 	public Context getContext() { return context; }
+
+	public int getMainActivityCount() {
+		return mainActivityCount;
+	}
+	public void IncMainActivityCount() {
+		++this.mainActivityCount;
+	}
+	public void DecMainActivityCount() {
+		--this.mainActivityCount;
+		if(this.mainActivityCount < 0)
+			this.mainActivityCount = 0;
+	}
 	
-	public boolean isHasFriendActivity() {
-		return hasFriendActivity;
-	}
-	public void setHasFriendActivity(boolean hasFriendActivity) {
-		this.hasFriendActivity = hasFriendActivity;
-	}
 	public boolean isMainFullScreen() {
 		return mainFullScreen;
 	}

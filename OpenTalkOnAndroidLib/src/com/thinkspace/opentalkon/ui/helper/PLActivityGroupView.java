@@ -2,8 +2,6 @@ package com.thinkspace.opentalkon.ui.helper;
 
 
 
-import com.thinkspace.opentalkon.ui.OTImageLoadBase;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +9,8 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.thinkspace.opentalkon.ui.OTImageLoadBase;
 
 public class PLActivityGroupView extends OTImageLoadBase implements IPLActivityGroupView{
 	boolean useMenu;
@@ -32,18 +32,6 @@ public class PLActivityGroupView extends OTImageLoadBase implements IPLActivityG
 	@Override
 	public void setUseMenu(boolean useMenu) {
 		this.useMenu = useMenu;
-	}
-
-	@Override
-	public void finish() {
-		super.finish();
-		//overridePendingTransition(R.anim.anim_rightin, R.anim.anim_rightout);
-	}
-
-	@Override
-	public void startActivity(Intent intent) {
-		super.startActivity(intent);
-		//overridePendingTransition(R.anim.anim_leftin, R.anim.anim_leftout);
 	}
 
 	@Override
